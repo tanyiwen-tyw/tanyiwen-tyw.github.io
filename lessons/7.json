@@ -1,0 +1,205 @@
+{
+  "title": "第七课 (Chapter 7)",
+  "vocab": [
+    {
+      "word": "头顶",
+      "pinyin": "tóu dǐng",
+      "meaning": "Top of head",
+      "example": "他头顶上顶着一个大西瓜。"
+    },
+    {
+      "word": "浮出",
+      "pinyin": "fú chū",
+      "meaning": "Emerge / Float up",
+      "example": "鲸鱼浮出水面呼吸空气。"
+    },
+    {
+      "word": "水柱",
+      "pinyin": "shuǐ zhù",
+      "meaning": "Water column",
+      "example": "鲸鱼喷出的水柱非常壮观。"
+    },
+    {
+      "word": "层",
+      "pinyin": "céng",
+      "meaning": "Layer",
+      "example": "蛋糕外面涂了一层厚厚的奶油。"
+    },
+    {
+      "word": "厚厚",
+      "pinyin": "hòu hòu",
+      "meaning": "Thick",
+      "example": "冬天，地上积了一层厚厚的雪。"
+    },
+    {
+      "word": "公斤",
+      "pinyin": "gōng jīn",
+      "meaning": "Kilogram",
+      "example": "这袋大米重十公斤。"
+    },
+    {
+      "word": "深海",
+      "pinyin": "shēn hǎi",
+      "meaning": "Deep sea",
+      "example": "深海里有很多神秘的生物。"
+    },
+    {
+      "word": "浅海",
+      "pinyin": "qiǎn hǎi",
+      "meaning": "Shallow sea",
+      "example": "浅海处适合游泳和浮潜。"
+    },
+    {
+      "word": "死掉",
+      "pinyin": "sǐ diào",
+      "meaning": "Die",
+      "example": "如果不浇水，这棵花会死掉。"
+    },
+    {
+      "word": "大概",
+      "pinyin": "dà gài",
+      "meaning": "About / Probably",
+      "example": "我大概需要一个小时完成作业。"
+    },
+    {
+      "word": "盖",
+      "pinyin": "gài",
+      "meaning": "Cover / Lid",
+      "example": "请把杯子的盖盖好。"
+    },
+    {
+      "word": "载",
+      "pinyin": "zài",
+      "meaning": "Carry / Load",
+      "example": "这辆货车载满了货物。"
+    },
+    {
+      "word": "波",
+      "pinyin": "bō",
+      "meaning": "Wave",
+      "example": "海浪一波接一波地拍打着沙滩。"
+    },
+    {
+      "word": "激动",
+      "pinyin": "jī dòng",
+      "meaning": "Excited",
+      "example": "听到获奖的消息，他激动地跳了起来。"
+    },
+    {
+      "word": "渐渐",
+      "pinyin": "jiàn jiàn",
+      "meaning": "Gradually",
+      "example": "天色渐渐暗了下来。"
+    },
+    {
+      "word": "巨大",
+      "pinyin": "jù dà",
+      "meaning": "Huge",
+      "example": "蓝鲸是一种体型巨大的动物。"
+    },
+    {
+      "word": "随着",
+      "pinyin": "suí zhe",
+      "meaning": "Along with",
+      "example": "随着科学的发展，生活越来越便利。"
+    },
+    {
+      "word": "依依不舍",
+      "pinyin": "yī yī bù shě",
+      "meaning": "Reluctant to part",
+      "example": "同学们依依不舍地告别了老师。"
+    },
+    {
+      "word": "消失",
+      "pinyin": "xiāo shí",
+      "meaning": "Vanish",
+      "example": "魔术师的手一挥，硬币就消失了。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "鲸鱼浮出水面，喷出高高的水柱。",
+      "segments": [
+        "鲸鱼",
+        "浮出",
+        "水面",
+        "，",
+        "喷出",
+        "高高的",
+        "水柱",
+        "。"
+      ],
+      "icon": "waves",
+      "color": "text-blue-400",
+      "description": "A whale emerging and spraying water."
+    },
+    {
+      "text": "蓝鲸是世界上最大的动物，身体非常巨大。",
+      "segments": [
+        "蓝鲸",
+        "是",
+        "世界上",
+        "最大的",
+        "动物",
+        "，",
+        "身体",
+        "非常",
+        "巨大",
+        "。"
+      ],
+      "icon": "activity",
+      "color": "text-indigo-600",
+      "description": "The blue whale is a massive animal."
+    },
+    {
+      "text": "随着音乐的响起，大家激动地跳起舞来。",
+      "segments": [
+        "随着",
+        "音乐",
+        "的",
+        "响起",
+        "，",
+        "大家",
+        "激动地",
+        "跳起",
+        "舞来",
+        "。"
+      ],
+      "icon": "smile",
+      "color": "text-pink-500",
+      "description": "Dancing excitedly to the music."
+    },
+    {
+      "text": "我们依依不舍地告别了朋友，踏上了归途。",
+      "segments": [
+        "我们",
+        "依依不舍地",
+        "告别了",
+        "朋友",
+        "，",
+        "踏上了",
+        "归途",
+        "。"
+      ],
+      "icon": "users",
+      "color": "text-slate-500",
+      "description": "Saying goodbye reluctantly to friends."
+    },
+    {
+      "text": "渐渐地，那只小船在海面上消失了。",
+      "segments": [
+        "渐渐地",
+        "，",
+        "那只",
+        "小船",
+        "在",
+        "海面上",
+        "消失了",
+        "。"
+      ],
+      "icon": "sunset",
+      "color": "text-orange-300",
+      "description": "A small boat vanishing gradually on the sea."
+    }
+  ]
+}

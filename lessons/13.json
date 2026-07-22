@@ -1,0 +1,180 @@
+{
+  "title": "第十三课 (Lesson 13)",
+  "vocab": [
+    {
+      "word": "记录",
+      "pinyin": "jì lù",
+      "meaning": "Record / Note down",
+      "example": "他把会议内容详细地记录了下来。"
+    },
+    {
+      "word": "不仅",
+      "pinyin": "bù jǐn",
+      "meaning": "Not only",
+      "example": "他不仅学习好，而且乐于助人。"
+    },
+    {
+      "word": "佩服",
+      "pinyin": "pèi fú",
+      "meaning": "Admire",
+      "example": "大家都很佩服他的勇气。"
+    },
+    {
+      "word": "骨",
+      "pinyin": "gǔ",
+      "meaning": "Bone",
+      "example": "小狗正在啃一块骨头。"
+    },
+    {
+      "word": "官员",
+      "pinyin": "guān yuán",
+      "meaning": "Official",
+      "example": "政府官员来到现场视察。"
+    },
+    {
+      "word": "违抗",
+      "pinyin": "wéi kàng",
+      "meaning": "Disobey / Defy",
+      "example": "我们不能违抗命令。"
+    },
+    {
+      "word": "窄",
+      "pinyin": "zhǎi",
+      "meaning": "Narrow",
+      "example": "这条小路非常狭窄。"
+    },
+    {
+      "word": "世界",
+      "pinyin": "shì jiè",
+      "meaning": "World",
+      "example": "这个世界充满了奇妙的事物。"
+    },
+    {
+      "word": "询问",
+      "pinyin": "xún wèn",
+      "meaning": "Inquire / Ask about",
+      "example": "警察向他询问当时的情况。"
+    },
+    {
+      "word": "派",
+      "pinyin": "pài",
+      "meaning": "Send / Dispatch",
+      "example": "学校派他去参加朗诵比赛。"
+    },
+    {
+      "word": "艺术",
+      "pinyin": "yì shù",
+      "meaning": "Art",
+      "example": "她从小就对音乐艺术很感兴趣。"
+    },
+    {
+      "word": "怀疑",
+      "pinyin": "huái yí",
+      "meaning": "Doubt / Suspect",
+      "example": "我不怀疑他的诚意。"
+    },
+    {
+      "word": "恍然大悟",
+      "pinyin": "huǎng rán dà wù",
+      "meaning": "Suddenly realize / Dawn upon",
+      "example": "听了老师的讲解，我才恍然大悟。"
+    },
+    {
+      "word": "产生",
+      "pinyin": "chǎn shēng",
+      "meaning": "Produce / Generate",
+      "example": "他们之间产生了误会。"
+    },
+    {
+      "word": "墨",
+      "pinyin": "mò",
+      "meaning": "Ink",
+      "example": "他不小心把墨水泼到了桌上。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "老天爷好像故意跟我作对似的，骤然下起了滂沱大雨。",
+      "segments": [
+        "老天爷",
+        "好像",
+        "故意和我作对似的",
+        "，",
+        "骤然",
+        "下起了",
+        "滂沱大雨",
+        "。"
+      ],
+      "icon": "cloud-lightning",
+      "color": "text-blue-600",
+      "description": "It suddenly poured torrential rain as if heaven was intentionally against me."
+    },
+    {
+      "text": "原本晴朗的天空，突然间乌云密布，雷电交加，接着大雨就倾盆而下。",
+      "segments": [
+        "原本晴朗的",
+        "天空",
+        "，",
+        "突然间",
+        "乌云密布",
+        "，",
+        "雷电交加",
+        "，",
+        "接着",
+        "大雨",
+        "就倾盆而下",
+        "。"
+      ],
+      "icon": "cloud-rain",
+      "color": "text-slate-600",
+      "description": "Clear sky suddenly filled with dark clouds, thunder, lightning, and heavy downpour."
+    },
+    {
+      "text": "雨过天晴，空中出现一道彩虹，仿佛一座七彩桥挂在天上。",
+      "segments": [
+        "雨过天晴",
+        "，",
+        "空中",
+        "出现一道彩虹",
+        "，",
+        "仿佛",
+        "一座七彩桥",
+        "挂在天上",
+        "。"
+      ],
+      "icon": "sun",
+      "color": "text-pink-400",
+      "description": "After the rain, a rainbow appeared in the sky like a seven-colored bridge."
+    },
+    {
+      "text": "他好像换了两条腿，跑得如风似电。",
+      "segments": [
+        "他",
+        "好像换了两条腿",
+        "，",
+        "跑得",
+        "如风似电",
+        "。"
+      ],
+      "icon": "zap",
+      "color": "text-yellow-400",
+      "description": "Ran as fast as wind and lightning as if having a new pair of legs."
+    },
+    {
+      "text": "他胸有成竹地说：“我们一定能成功！”",
+      "segments": [
+        "他",
+        "胸有成竹地",
+        "说",
+        "：",
+        "“",
+        "我们一定能成功",
+        "！",
+        "”"
+      ],
+      "icon": "check-circle",
+      "color": "text-emerald-500",
+      "description": "Said with full confidence that success is guaranteed."
+    }
+  ]
+}

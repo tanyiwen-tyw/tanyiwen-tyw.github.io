@@ -1,0 +1,200 @@
+{
+  "title": "第十一课 (Lesson 11)",
+  "vocab": [
+    {
+      "word": "初级",
+      "pinyin": "chū jí",
+      "meaning": "Primary / Elementary",
+      "example": "他报名参加了初级游泳班。"
+    },
+    {
+      "word": "详细",
+      "pinyin": "xiáng xì",
+      "meaning": "Detailed / Thorough",
+      "example": "老师详细地讲解了这道数学题。"
+    },
+    {
+      "word": "彼此",
+      "pinyin": "bǐ cǐ",
+      "meaning": "Each other / One another",
+      "example": "好朋友之间应该彼此信任。"
+    },
+    {
+      "word": "使",
+      "pinyin": "shǐ",
+      "meaning": "Make / Cause / Enable",
+      "example": "这次失败使他变得更加坚强。"
+    },
+    {
+      "word": "基本",
+      "pinyin": "jī běn",
+      "meaning": "Basic / Fundamental",
+      "example": "我们已经完成了基本的工作。"
+    },
+    {
+      "word": "胸口",
+      "pinyin": "xiōng kǒu",
+      "meaning": "Chest",
+      "example": "他感到胸口有些不舒服。"
+    },
+    {
+      "word": "扣子",
+      "pinyin": "kòu zi",
+      "meaning": "Button",
+      "example": "你的衬衫扣子扣错了。"
+    },
+    {
+      "word": "扑",
+      "pinyin": "pū",
+      "meaning": "Pounce on / Throw oneself at",
+      "example": "小狗兴奋地扑向主人。"
+    },
+    {
+      "word": "有限",
+      "pinyin": "yǒu xiàn",
+      "meaning": "Limited / Finite",
+      "example": "个人的力量是有限的。"
+    },
+    {
+      "word": "躲闪",
+      "pinyin": "duǒ shǎn",
+      "meaning": "Dodge / Evade",
+      "example": "面对问题，我们不能躲闪。"
+    },
+    {
+      "word": "狠狠",
+      "pinyin": "hěn hěn",
+      "meaning": "Ferociously / Severely",
+      "example": "老师狠狠地批评了他。"
+    },
+    {
+      "word": "恨",
+      "pinyin": "hèn",
+      "meaning": "Hate / Regret",
+      "example": "他恨自己没有早点听话。"
+    },
+    {
+      "word": "尽早",
+      "pinyin": "jǐn zǎo",
+      "meaning": "As early as possible",
+      "example": "有病就要尽早去看医生。"
+    },
+    {
+      "word": "扭打",
+      "pinyin": "niǔ dǎ",
+      "meaning": "Wrestle / Scuffle",
+      "example": "两个人在地上扭打成一团。"
+    },
+    {
+      "word": "零",
+      "pinyin": "líng",
+      "meaning": "Zero",
+      "example": "今天气温下降到了零度。"
+    },
+    {
+      "word": "至",
+      "pinyin": "zhì",
+      "meaning": "To / Until",
+      "example": "图书馆的开放时间是早上九点至下午五点。"
+    },
+    {
+      "word": "衬衫",
+      "pinyin": "chèn shān",
+      "meaning": "Shirt",
+      "example": "爸爸穿着一件干净的白衬衫。"
+    },
+    {
+      "word": "瞪",
+      "pinyin": "dèng",
+      "meaning": "Stare / Glare",
+      "example": "他生气地瞪了对方一眼。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "常言道：“人非圣贤，孰能无过。”",
+      "segments": [
+        "常言道",
+        "：",
+        "“",
+        "人非圣贤",
+        "，",
+        "孰能无过",
+        "。",
+        "”"
+      ],
+      "icon": "book-open",
+      "color": "text-indigo-500",
+      "description": "As the saying goes, no one is perfect and everyone makes mistakes."
+    },
+    {
+      "text": "我感到十分惭愧，真不应该动手打人。",
+      "segments": [
+        "我",
+        "感到",
+        "十分惭愧",
+        "，",
+        "真不应该",
+        "动手打人",
+        "。"
+      ],
+      "icon": "frown",
+      "color": "text-slate-500",
+      "description": "Feeling deeply ashamed for resorting to physical violence."
+    },
+    {
+      "text": "我急得像热锅上的蚂蚁，恨不得插上翅膀飞回家。",
+      "segments": [
+        "我",
+        "急得像",
+        "热锅上的蚂蚁",
+        "，",
+        "恨不得",
+        "插上翅膀",
+        "飞回家",
+        "。"
+      ],
+      "icon": "zap",
+      "color": "text-orange-500",
+      "description": "Anxious like ants on a hot pan, wishing for wings to fly home."
+    },
+    {
+      "text": "我不应该在事情还没有水落石出之前，就急于下定论。",
+      "segments": [
+        "我",
+        "不应该",
+        "在事情",
+        "还没有",
+        "水落石出",
+        "之前",
+        "，",
+        "就急于",
+        "下定论",
+        "。"
+      ],
+      "icon": "alert-circle",
+      "color": "text-red-400",
+      "description": "Should not jump to conclusions before the truth comes to light."
+    },
+    {
+      "text": "考卷发下来后，我惊呆了，卷子上写着一个史无前例的低分。",
+      "segments": [
+        "考卷",
+        "发下来后",
+        "，",
+        "我",
+        "惊呆了",
+        "，",
+        "卷子上",
+        "写着",
+        "一个",
+        "史无前例的",
+        "低分",
+        "。"
+      ],
+      "icon": "file-text",
+      "color": "text-gray-500",
+      "description": "Shocked after receiving an unprecedented low score on the exam."
+    }
+  ]
+}

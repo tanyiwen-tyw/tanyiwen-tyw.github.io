@@ -1,0 +1,179 @@
+{
+  "title": "第六课 (Chapter 6)",
+  "vocab": [
+    {
+      "word": "银色",
+      "pinyin": "yín sè",
+      "meaning": "Silver",
+      "example": "月光洒在湖面上，呈现出一片银色。"
+    },
+    {
+      "word": "联系",
+      "pinyin": "lián xì",
+      "meaning": "Contact",
+      "example": "我们要经常和老朋友保持联系。"
+    },
+    {
+      "word": "号码",
+      "pinyin": "hào mǎ",
+      "meaning": "Number",
+      "example": "请告诉我你的电话号码。"
+    },
+    {
+      "word": "早晨",
+      "pinyin": "zǎo chen",
+      "meaning": "Morning",
+      "example": "早晨的空气非常清新。"
+    },
+    {
+      "word": "摇晃",
+      "pinyin": "yáo huàng",
+      "meaning": "Shake / Sway",
+      "example": "大风吹来，树枝不停地摇晃。"
+    },
+    {
+      "word": "倒退",
+      "pinyin": "dào tuì",
+      "meaning": "Go backwards",
+      "example": "汽车正在慢慢向后倒退。"
+    },
+    {
+      "word": "争先恐后",
+      "pinyin": "zhēng xiān kǒng hòu",
+      "meaning": "Strive to be first",
+      "example": "大家争先恐后地跑向终点。"
+    },
+    {
+      "word": "飘",
+      "pinyin": "piāo",
+      "meaning": "Float",
+      "example": "雪花在空中随风飘动。"
+    },
+    {
+      "word": "呆",
+      "pinyin": "dāi",
+      "meaning": "Stay / Blank",
+      "example": "他站在那里发呆，不知道在想什么。"
+    },
+    {
+      "word": "阻拦",
+      "pinyin": "zǔ lán",
+      "meaning": "Block / Stop",
+      "example": "谁也阻拦不了他追求梦想。"
+    },
+    {
+      "word": "不约而同",
+      "pinyin": "bù yuē ér tóng",
+      "meaning": "Coincide",
+      "example": "听到好消息，大家不约而同地欢呼起来。"
+    },
+    {
+      "word": "麻烦",
+      "pinyin": "má fan",
+      "meaning": "Trouble",
+      "example": "这件事处理起来非常麻烦。"
+    },
+    {
+      "word": "诚实",
+      "pinyin": "chéng shí",
+      "meaning": "Honest",
+      "example": "我们要做一个诚实的孩子。"
+    },
+    {
+      "word": "善良",
+      "pinyin": "shàn liáng",
+      "meaning": "Kind",
+      "example": "她有一颗善良的心，经常帮助别人。"
+    },
+    {
+      "word": "回忆",
+      "pinyin": "huí yì",
+      "meaning": "Memory / Recall",
+      "example": "童年的生活给我留下了美好的回忆。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "早晨，妈妈带我去公园散步。",
+      "segments": [
+        "早晨",
+        "，",
+        "妈妈",
+        "带我",
+        "去",
+        "公园",
+        "散步",
+        "。"
+      ],
+      "icon": "sunset",
+      "color": "text-orange-400",
+      "description": "Walking in the park in the morning."
+    },
+    {
+      "text": "他站在那里呆住了，不知道该说什么。",
+      "segments": [
+        "他",
+        "站在",
+        "那里",
+        "呆住了",
+        "，",
+        "不知道",
+        "该",
+        "说什么",
+        "。"
+      ],
+      "icon": "frown",
+      "color": "text-blue-500",
+      "description": "Standing blankly, not knowing what to say."
+    },
+    {
+      "text": "同学们争先恐后地跑出教室，去参加活动。",
+      "segments": [
+        "同学们",
+        "争先恐后地",
+        "跑出",
+        "教室",
+        "，",
+        "去",
+        "参加",
+        "活动",
+        "。"
+      ],
+      "icon": "users",
+      "color": "text-indigo-500",
+      "description": "Students rushing out of the classroom."
+    },
+    {
+      "text": "这个联系号码是错误的，请核对。",
+      "segments": [
+        "这个",
+        "联系",
+        "号码",
+        "是",
+        "错误的",
+        "，",
+        "请",
+        "核对",
+        "。"
+      ],
+      "icon": "phone",
+      "color": "text-red-500",
+      "description": "Checking an incorrect phone number."
+    },
+    {
+      "text": "他的善良打动了在场的所有人。",
+      "segments": [
+        "他的",
+        "善良",
+        "打动了",
+        "在场",
+        "的",
+        "所有人",
+        "。"
+      ],
+      "icon": "heart",
+      "color": "text-pink-500",
+      "description": "Kindness touching everyone present."
+    }
+  ]
+}
