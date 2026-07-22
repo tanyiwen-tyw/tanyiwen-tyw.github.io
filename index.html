@@ -18,7 +18,7 @@
   .animate-in { animation: fadeInUp 0.4s ease-out; }
 </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-gradient-to-br from-violet-50 via-rose-50 to-sky-50 text-slate-900">
 <div id="app"></div>
 
 <script>
@@ -99,351 +99,6 @@ function playSound(type) {
   }
 }
 
-/* ---------------- Data (icon fields store lucide name + tailwind color class) ---------------- */
-const DATA = {
-  1: { title: "第一课 (Lesson 1)",
-    vocab: [
-      { word: "露营", pinyin: "lù yíng", meaning: "Camping", example: "我们全家去年去森林露营。" },
-      { word: "一顿饭", pinyin: "yí dùn fàn", meaning: "A meal", example: "妈妈为我们准备了一顿饭。" },
-      { word: "单独", pinyin: "dān dú", meaning: "Alone / Individually", example: "他不习惯单独一个人呆在家里。" },
-      { word: "绑", pinyin: "bǎng", meaning: "Tie / Bind", example: "他用绳子把木头绑在一起。" },
-      { word: "集合", pinyin: "jí hé", meaning: "Gather / Assemble", example: "老师叫大家在操场集合。" },
-      { word: "狼吞虎咽", pinyin: "láng tūn hǔ yàn", meaning: "Wolf down / Gobble up", example: "他太饿了，一下子就狼吞虎咽地吃完了。" },
-      { word: "贵重", pinyin: "guì zhòng", meaning: "Valuable / Precious", example: "这些是贵重物品，要小心保管。" },
-      { word: "摔倒", pinyin: "shuāi dǎo", meaning: "Fall down", example: "他不小心摔倒在地上。" },
-      { word: "袜子", pinyin: "wà zi", meaning: "Socks", example: "你应该每天换干净的袜子。" },
-      { word: "感到充实", pinyin: "gǎn dào chōng shí", meaning: "Feel fulfilled", example: "今天帮邻居做家务，我感到很充实。" },
-      { word: "冠军", pinyin: "guàn jūn", meaning: "Champion", example: "他在长跑比赛中得了冠军。" },
-      { word: "轮", pinyin: "lún", meaning: "Turn / Wheel", example: "现在轮到你上场表演了。" },
-      { word: "探险", pinyin: "tàn xiǎn", meaning: "Explore / Adventure", example: "孩子们喜欢在后山探险。" },
-      { word: "齐心协力", pinyin: "qí xīn xié lì", meaning: "Work together", example: "大家齐心协力，终于完成了任务。" },
-      { word: "禁止", pinyin: "jìn zhǐ", meaning: "Prohibit / Ban", example: "这里禁止吸烟。" },
-      { word: "配合", pinyin: "pèi hé", meaning: "Coordinate / Cooperate", example: "这次活动需要大家的紧密配合。" },
-      { word: "擦", pinyin: "cā", meaning: "Wipe / Rub", example: "他用毛巾擦了擦脸上的汗。" },
-      { word: "防止", pinyin: "fáng zhǐ", meaning: "Prevent", example: "洗手可以防止病菌传播。" }
-    ],
-    sentences: [
-      { text: "听到喊声，他不管三七二十一，跳下水救人。", segments: ["听到", "喊声", "，", "他", "不管三七二十一", "，", "跳下水", "救人", "。"], icon: "activity", color: "text-blue-500", description: "Regardless of consequences, jumping in to save someone." },
-      { text: "回到家里，我虽然很累，但是却感到很充实。", segments: ["回到", "家里", "，", "我", "虽然", "很累", "，", "但是", "却", "感到很充实", "。"], icon: "smile", color: "text-yellow-500", description: "Tired but feeling fulfilled after a long day." },
-      { text: "我心跳开始加快，手心开始冒汗，心像在打鼓一样。", segments: ["我", "心跳", "开始加快", "，", "手心", "开始冒汗", "，", "心像在打鼓一样", "。"], icon: "activity", color: "text-red-500", description: "Heart racing and palms sweating like a drum." },
-      { text: "碧蓝的天空万里无云，今天又是风和日丽的好天气。", segments: ["碧蓝的", "天空", "万里无云", "，", "今天", "又是", "风和日丽的", "好天气", "。"], icon: "sun", color: "text-orange-400", description: "Clear blue sky and beautiful sunny weather." },
-      { text: "天空本来是晴朗的，但过了不久却乌云密布，雷声隆隆。", segments: ["天空", "本来是", "晴朗的", "，", "但", "过了不久", "却", "乌云密布", "，", "雷声隆隆", "。"], icon: "cloud-rain", color: "text-slate-500", description: "Sudden dark clouds and thunder." }
-    ]
-  },
-  2: { title: "第二课 (Lesson 2)",
-    vocab: [
-      { word: "答案", pinyin: "dá àn", meaning: "Answer", example: "这个问题没有标准答案。" },
-      { word: "户外", pinyin: "hù wài", meaning: "Outdoors", example: "我喜欢在周末参加户外活动。" },
-      { word: "伤害", pinyin: "shāng hài", meaning: "Harm / Hurt", example: "我们不要轻易伤害别人的感情。" },
-      { word: "盯", pinyin: "dīng", meaning: "Stare / Gaze", example: "他目不转睛地盯着书本。" },
-      { word: "代表", pinyin: "dài biǎo", meaning: "Represent", example: "他代表学校参加了比赛。" },
-      { word: "而且", pinyin: "ér qiě", meaning: "Furthermore / And", example: "她不仅聪明，而且非常勤奋。" },
-      { word: "习惯", pinyin: "xí guàn", meaning: "Habit", example: "早睡早起是一个好习惯。" },
-      { word: "正确", pinyin: "zhèng què", meaning: "Correct", example: "请选择正确的选项。" },
-      { word: "昏暗", pinyin: "hūn àn", meaning: "Dim / Dark", example: "这里的灯光太昏暗了。" },
-      { word: "放松", pinyin: "fàng sōng", meaning: "Relax", example: "听音乐可以让我感到放松。" },
-      { word: "每隔", pinyin: "měi gé", meaning: "At intervals of", example: "每隔一小时，我们就休息一下。" },
-      { word: "下降", pinyin: "xià jiàng", meaning: "Decline / Drop", example: "最近气温有所下降。" },
-      { word: "电脑", pinyin: "diàn nǎo", meaning: "Computer", example: "我用电脑写作业。" },
-      { word: "眼圈", pinyin: "yǎn quān", meaning: "Eye circles", example: "他熬夜了，黑眼圈很重。" },
-      { word: "模糊", pinyin: "mó hu", meaning: "Blurry", example: "远处的景物有些模糊。" },
-      { word: "抛到脑后", pinyin: "pāo dào nǎo hòu", meaning: "To forget completely", example: "他把烦恼都抛到脑后了。" },
-      { word: "保持", pinyin: "bǎo chí", meaning: "Maintain", example: "请保持安静。" },
-      { word: "距离", pinyin: "jù lí", meaning: "Distance", example: "我们要保持安全距离。" }
-    ],
-    sentences: [
-      { text: "小月吓得浑身发抖，直冒冷汗。", segments: ["小月", "吓得", "浑身发抖", "，", "直冒", "冷汗", "。"], icon: "ghost", color: "text-purple-500", description: "Scared girl, shivering with cold sweat." },
-      { text: "小安坐在电脑前，目不转睛地盯着屏幕。", segments: ["小安", "坐在", "电脑前", "，", "目不转睛地", "盯着", "屏幕", "。"], icon: "monitor", color: "text-blue-500", description: "A boy staring intently at the computer screen." },
-      { text: "我急得像热锅上的蚂蚁，心里七上八下的。", segments: ["我", "急得像", "热锅上的", "蚂蚁", "，", "心里", "七上八下的", "。"], icon: "flame", color: "text-red-500", description: "Anxious like an ant on a hot pan." },
-      { text: "在好奇心的驱使下，我向着烟味的方向走去。", segments: ["在", "好奇心的", "驱使下", "，", "我", "向着", "烟味的方向", "走去", "。"], icon: "search", color: "text-emerald-500", description: "Driven by curiosity, walking towards the smoke." },
-      { text: "因为睡眠不足，他整天无精打采，身体也变差了。", segments: ["因为", "睡眠不足", "，", "他", "整天", "无精打采", "，", "身体", "也变差了", "。"], icon: "coffee", color: "text-amber-600", description: "Listless and tired due to lack of sleep." }
-    ]
-  },
-  3: { title: "第三课 (Lesson 3)",
-    vocab: [
-      { word: "黄瓜", pinyin: "huáng guā", meaning: "Cucumber", example: "奶奶在花园里种了很多黄瓜。" },
-      { word: "聚会", pinyin: "jù huì", meaning: "Gathering / Party", example: "今晚我们有个同学聚会。" },
-      { word: "似的", pinyin: "shì de", meaning: "As if", example: "他高兴得像个孩子似的。" },
-      { word: "剪", pinyin: "jiǎn", meaning: "Cut / Scissors", example: "请用剪刀把这张纸剪开。" },
-      { word: "紫菜", pinyin: "zǐ cài", meaning: "Seaweed", example: "紫菜汤很有营养。" },
-      { word: "祝福", pinyin: "zhù fú", meaning: "Bless / Wishes", example: "我送上最诚挚的祝福。" },
-      { word: "身份", pinyin: "shēn fèn", meaning: "Identity / Status", example: "他的身份依然是个秘密。" },
-      { word: "炒", pinyin: "chǎo", meaning: "Stir-fry", example: "妈妈炒了一盘青菜。" },
-      { word: "形状", pinyin: "xíng zhuàng", meaning: "Shape", example: "这块饼干的形状很特别。" },
-      { word: "调味料", pinyin: "tiáo wèi liào", meaning: "Seasoning", example: "汤里加点调味料会更好喝。" },
-      { word: "贺卡", pinyin: "hè kǎ", meaning: "Greeting card", example: "我亲手做了一张贺卡送给老师。" },
-      { word: "安慰", pinyin: "ān wèi", meaning: "Comfort", example: "朋友难过时，我们要去安慰他。" },
-      { word: "沉默", pinyin: "chén mò", meaning: "Silence", example: "屋子里陷入了一片沉默。" },
-      { word: "异口同声", pinyin: "yì kǒu tóng shēng", meaning: "With one voice", example: "大家异口同声地回答了老师的问题。" },
-      { word: "烦恼", pinyin: "fán nǎo", meaning: "Trouble / Worry", example: "别为这点小事烦恼了。" },
-      { word: "劳累", pinyin: "láo lèi", meaning: "Tired / Exhausted", example: "长时间的工作让他感到非常劳累。" },
-      { word: "错误", pinyin: "cuò wù", meaning: "Mistake", example: "承认错误是勇敢的表现。" },
-      { word: "材料", pinyin: "cái liào", meaning: "Material", example: "我们已经准备好了手工材料。" }
-    ],
-    sentences: [
-      { text: "同学们抬起了头，七嘴八舌地说了起来。", segments: ["同学们", "抬起了头", "，", "七嘴八舌地", "说了起来", "。"], icon: "users", color: "text-indigo-500", description: "Students speaking all at once." },
-      { text: "他们俩同时萌生了一个坏主意。", segments: ["他们俩", "同时", "萌生了", "一个", "坏主意", "。"], icon: "brain", color: "text-purple-600", description: "Two people coming up with a bad idea together." },
-      { text: "我心里有了决定后，就像一支离了弦的箭一样，拼命地跑向学校。", segments: ["我", "心里", "有了决定后", "，", "就", "像一支离了弦的箭一样", "，", "拼命地", "跑向学校", "。"], icon: "activity", color: "text-red-600", description: "Running towards school as fast as an arrow." },
-      { text: "老师看见我气喘吁吁的样子，就问我发生了什么事。", segments: ["老师", "看见我", "气喘吁吁的", "样子", "，", "就问我", "发生了", "什么事", "。"], icon: "activity", color: "text-blue-400", description: "Teacher asking what happened as I arrived out of breath." },
-      { text: "小乐见状，一时惊呆了，张开了嘴巴，半天没合拢。", segments: ["小乐", "见状", "，", "一时惊呆了", "，", "张开了", "嘴巴", "，", "半天没合拢", "。"], icon: "frown", color: "text-orange-500", description: "Jaw dropping in shock." }
-    ]
-  },
-  4: { title: "第四课 (Lesson 4)",
-    vocab: [
-      { word: "捐出", pinyin: "juān chū", meaning: "Donate", example: "他把所有的零用钱都捐出了。" },
-      { word: "新鲜", pinyin: "xīn xiān", meaning: "Fresh", example: "这些蔬菜非常新鲜。" },
-      { word: "奇怪", pinyin: "qí guài", meaning: "Strange", example: "这只小猫的长相有点奇怪。" },
-      { word: "敲", pinyin: "qiāo", meaning: "Knock", example: "有人在外面敲门。" },
-      { word: "酒类", pinyin: "jiǔ lèi", meaning: "Alcohol", example: "未成年人不能购买酒类。" },
-      { word: "果汁", pinyin: "guǒ zhī", meaning: "Juice", example: "我最喜欢喝苹果汁。" },
-      { word: "纷纷", pinyin: "fēn fēn", meaning: "One after another", example: "下课了，同学们纷纷跑出教室。" },
-      { word: "陌生", pinyin: "mò shēng", meaning: "Strange / Unfamiliar", example: "在这里，我感到一切都很陌生。" },
-      { word: "必须", pinyin: "bì xū", meaning: "Must", example: "你必须在明天之前完成任务。" },
-      { word: "饼干", pinyin: "bǐng gān", meaning: "Biscuit / Cookie", example: "这些巧克力饼干很好吃。" },
-      { word: "愉快", pinyin: "yú kuài", meaning: "Happy / Pleasant", example: "我们度过了一个愉快的假期。" },
-      { word: "邀请", pinyin: "yāo qǐng", meaning: "Invite", example: "我邀请他来参加我的生日派对。" },
-      { word: "存放", pinyin: "cún fàng", meaning: "Store / Deposit", example: "请把行李存放在这里。" },
-      { word: "烧水", pinyin: "shāo shuǐ", meaning: "Boil water", example: "他在厨房里烧水泡茶。" },
-      { word: "宁静", pinyin: "níng jìng", meaning: "Quiet / Peaceful", example: "乡村的夜晚非常宁静。" },
-      { word: "一溜烟", pinyin: "yì liù yān", meaning: "Swiftly", example: "他一溜烟跑得没影了。" },
-      { word: "自私", pinyin: "zì sī", meaning: "Selfish", example: "做一个自私的人是不会有朋友的。" },
-      { word: "缺少", pinyin: "quē shǎo", meaning: "Lack", example: "这个计划缺少一些关键细节。" }
-    ],
-    sentences: [
-      { text: "“我们怎么办？”小华愁眉苦脸地对班长说。", segments: ["“", "我们怎么办？", "”", "小华", "愁眉苦脸地", "对班长", "说", "。"], icon: "frown", color: "text-slate-600", description: "Worrying with a long face." },
-      { text: "他们终于明白了分享能带给大家快乐。", segments: ["他们", "终于", "明白了", "分享", "能带给", "大家", "快乐", "。"], icon: "gift", color: "text-pink-500", description: "Understanding that sharing brings joy." },
-      { text: "小华把事情的来龙去脉一五一十地向老师报告。", segments: ["小华", "把", "事情的", "来龙去脉", "一五一十地", "向老师", "报告", "。"], icon: "search", color: "text-blue-500", description: "Reporting the whole story from start to finish." },
-      { text: "我和小明向校长认错，并答应以后不再重蹈覆辙了。", segments: ["我", "和小明", "向校长", "认错", "，", "并", "答应", "以后", "不再", "重蹈覆辙了", "。"], icon: "check", color: "text-green-500", description: "Admitting mistakes and promising not to repeat them." },
-      { text: "我们接受完一场暴风骤雨般的责骂后，休息时间也结束了。", segments: ["我们", "接受完", "一场", "暴风骤雨般的", "责骂后", "，", "休息时间", "也结束了", "。"], icon: "cloud-rain", color: "text-red-700", description: "Enduring a storm-like scolding." }
-    ]
-  },
-  5: { title: "第五课 (Lesson 5)",
-    vocab: [
-      { word: "程度", pinyin: "chéng dù", meaning: "Degree / Level", example: "他的汉语达到了很高的程度。" },
-      { word: "矛盾", pinyin: "máo dùn", meaning: "Contradiction / Conflict", example: "他们两个人的看法有点矛盾。" },
-      { word: "严肃", pinyin: "yán sù", meaning: "Serious", example: "爸爸表情严肃地看着我。" },
-      { word: "逗", pinyin: "dòu", meaning: "Tease / Amuse", example: "他在逗小猫玩。" },
-      { word: "根据", pinyin: "gēn jù", meaning: "According to", example: "根据天气预报，明天会下雨。" },
-      { word: "遇到", pinyin: "yù dào", meaning: "Meet / Encounter", example: "我在路上遇到了一个老同学。" },
-      { word: "不禁", pinyin: "bù jīn", meaning: "Cannot help but", example: "看到这个好笑的场面，我不禁笑出声来。" },
-      { word: "怀疑", pinyin: "huái yí", meaning: "Suspect / Doubt", example: "我怀疑这个消息是假的。" },
-      { word: "测试", pinyin: "cè shì", meaning: "Test", example: "这是一次性格测试。" },
-      { word: "碎片", pinyin: "suì piàn", meaning: "Fragment", example: "杯子掉在地上变成了碎片。" },
-      { word: "呼吸", pinyin: "hū xī", meaning: "Breathe", example: "早晨的空气很清新，适合深呼吸。" },
-      { word: "避开", pinyin: "bì kāi", meaning: "Avoid", example: "他总是故意避开那个话题。" },
-      { word: "愤怒", pinyin: "fèn nù", meaning: "Anger", example: "他的无礼行为让人感到非常愤怒。" },
-      { word: "火辣", pinyin: "huǒ là", meaning: "Burning / Spicy hot", example: "他的脸感到火辣辣的。" },
-      { word: "打招呼", pinyin: "dǎ zhā o hu", meaning: "Greet", example: "见到老师要主动打招呼。" },
-      { word: "一分一秒", pinyin: "yì fēn yì miǎo", meaning: "Every second", example: "我们要珍惜每一分一秒。" },
-      { word: "抱怨", pinyin: "bào yuàn", meaning: "Complain", example: "他总是抱怨工作太累。" },
-      { word: "闯祸", pinyin: "chuǎng huò", meaning: "Get into trouble", example: "这孩子又闯祸了。" }
-    ],
-    sentences: [
-      { text: "他吓得脸青唇白，惊恐万状。", segments: ["他", "吓得", "脸青唇白", "，", "惊恐万状", "。"], icon: "ghost", color: "text-slate-800", description: "Pale face and extreme terror." },
-      { text: "当我看到这一幕，顿时大惊失色。", segments: ["当我", "看到", "这一幕", "，", "顿时", "大惊失色", "。"], icon: "search", color: "text-yellow-600", description: "Turning pale with fright upon seeing something." },
-      { text: "我的脸红得像一个熟透了的红苹果。", segments: ["我的", "脸", "红得像", "一个", "熟透了的", "红苹果", "。"], icon: "flame", color: "text-red-500", description: "Blushing deeply like a ripe red apple." },
-      { text: "拿到试卷，我拖着沉重的脚步走路回家。", segments: ["拿到", "试卷", "，", "我", "拖着", "沉重的脚步", "走路回家", "。"], icon: "frown", color: "text-blue-800", description: "Walking home with heavy steps after getting exam results." },
-      { text: "妈妈见我这么懂事，乐得眉开眼笑，开心地竖起大拇指。", segments: ["妈妈", "见我", "这么懂事", "，", "乐得", "眉开眼笑", "，", "开心地", "竖起大拇指", "。"], icon: "smile", color: "text-pink-400", description: "Mother beaming with joy and giving a thumbs up." }
-    ]
-  },
-  6: { title: "第六课 (Chapter 6)",
-    vocab: [
-      { word: "银色", pinyin: "yín sè", meaning: "Silver", example: "月光洒在湖面上，呈现出一片银色。" },
-      { word: "联系", pinyin: "lián xì", meaning: "Contact", example: "我们要经常和老朋友保持联系。" },
-      { word: "号码", pinyin: "hào mǎ", meaning: "Number", example: "请告诉我你的电话号码。" },
-      { word: "早晨", pinyin: "zǎo chen", meaning: "Morning", example: "早晨的空气非常清新。" },
-      { word: "摇晃", pinyin: "yáo huàng", meaning: "Shake / Sway", example: "大风吹来，树枝不停地摇晃。" },
-      { word: "倒退", pinyin: "dào tuì", meaning: "Go backwards", example: "汽车正在慢慢向后倒退。" },
-      { word: "争先恐后", pinyin: "zhēng xiān kǒng hòu", meaning: "Strive to be first", example: "大家争先恐后地跑向终点。" },
-      { word: "飘", pinyin: "piāo", meaning: "Float", example: "雪花在空中随风飘动。" },
-      { word: "呆", pinyin: "dāi", meaning: "Stay / Blank", example: "他站在那里发呆，不知道在想什么。" },
-      { word: "阻拦", pinyin: "zǔ lán", meaning: "Block / Stop", example: "谁也阻拦不了他追求梦想。" },
-      { word: "不约而同", pinyin: "bù yuē ér tóng", meaning: "Coincide", example: "听到好消息，大家不约而同地欢呼起来。" },
-      { word: "麻烦", pinyin: "má fan", meaning: "Trouble", example: "这件事处理起来非常麻烦。" },
-      { word: "诚实", pinyin: "chéng shí", meaning: "Honest", example: "我们要做一个诚实的孩子。" },
-      { word: "善良", pinyin: "shàn liáng", meaning: "Kind", example: "她有一颗善良的心，经常帮助别人。" },
-      { word: "回忆", pinyin: "huí yì", meaning: "Memory / Recall", example: "童年的生活给我留下了美好的回忆。" }
-    ],
-    sentences: [
-      { text: "早晨，妈妈带我去公园散步。", segments: ["早晨", "，", "妈妈", "带我", "去", "公园", "散步", "。"], icon: "sunset", color: "text-orange-400", description: "Walking in the park in the morning." },
-      { text: "他站在那里呆住了，不知道该说什么。", segments: ["他", "站在", "那里", "呆住了", "，", "不知道", "该", "说什么", "。"], icon: "frown", color: "text-blue-500", description: "Standing blankly, not knowing what to say." },
-      { text: "同学们争先恐后地跑出教室，去参加活动。", segments: ["同学们", "争先恐后地", "跑出", "教室", "，", "去", "参加", "活动", "。"], icon: "users", color: "text-indigo-500", description: "Students rushing out of the classroom." },
-      { text: "这个联系号码是错误的，请核对。", segments: ["这个", "联系", "号码", "是", "错误的", "，", "请", "核对", "。"], icon: "phone", color: "text-red-500", description: "Checking an incorrect phone number." },
-      { text: "他的善良打动了在场的所有人。", segments: ["他的", "善良", "打动了", "在场", "的", "所有人", "。"], icon: "heart", color: "text-pink-500", description: "Kindness touching everyone present." }
-    ]
-  },
-  7: { title: "第七课 (Chapter 7)",
-    vocab: [
-      { word: "头顶", pinyin: "tóu dǐng", meaning: "Top of head", example: "他头顶上顶着一个大西瓜。" },
-      { word: "浮出", pinyin: "fú chū", meaning: "Emerge / Float up", example: "鲸鱼浮出水面呼吸空气。" },
-      { word: "水柱", pinyin: "shuǐ zhù", meaning: "Water column", example: "鲸鱼喷出的水柱非常壮观。" },
-      { word: "层", pinyin: "céng", meaning: "Layer", example: "蛋糕外面涂了一层厚厚的奶油。" },
-      { word: "厚厚", pinyin: "hòu hòu", meaning: "Thick", example: "冬天，地上积了一层厚厚的雪。" },
-      { word: "公斤", pinyin: "gōng jīn", meaning: "Kilogram", example: "这袋大米重十公斤。" },
-      { word: "深海", pinyin: "shēn hǎi", meaning: "Deep sea", example: "深海里有很多神秘的生物。" },
-      { word: "浅海", pinyin: "qiǎn hǎi", meaning: "Shallow sea", example: "浅海处适合游泳和浮潜。" },
-      { word: "死掉", pinyin: "sǐ diào", meaning: "Die", example: "如果不浇水，这棵花会死掉。" },
-      { word: "大概", pinyin: "dà gài", meaning: "About / Probably", example: "我大概需要一个小时完成作业。" },
-      { word: "盖", pinyin: "gài", meaning: "Cover / Lid", example: "请把杯子的盖盖好。" },
-      { word: "载", pinyin: "zài", meaning: "Carry / Load", example: "这辆货车载满了货物。" },
-      { word: "波", pinyin: "bō", meaning: "Wave", example: "海浪一波接一波地拍打着沙滩。" },
-      { word: "激动", pinyin: "jī dòng", meaning: "Excited", example: "听到获奖的消息，他激动地跳了起来。" },
-      { word: "渐渐", pinyin: "jiàn jiàn", meaning: "Gradually", example: "天色渐渐暗了下来。" },
-      { word: "巨大", pinyin: "jù dà", meaning: "Huge", example: "蓝鲸是一种体型巨大的动物。" },
-      { word: "随着", pinyin: "suí zhe", meaning: "Along with", example: "随着科学的发展，生活越来越便利。" },
-      { word: "依依不舍", pinyin: "yī yī bù shě", meaning: "Reluctant to part", example: "同学们依依不舍地告别了老师。" },
-      { word: "消失", pinyin: "xiāo shí", meaning: "Vanish", example: "魔术师的手一挥，硬币就消失了。" }
-    ],
-    sentences: [
-      { text: "鲸鱼浮出水面，喷出高高的水柱。", segments: ["鲸鱼", "浮出", "水面", "，", "喷出", "高高的", "水柱", "。"], icon: "waves", color: "text-blue-400", description: "A whale emerging and spraying water." },
-      { text: "蓝鲸是世界上最大的动物，身体非常巨大。", segments: ["蓝鲸", "是", "世界上", "最大的", "动物", "，", "身体", "非常", "巨大", "。"], icon: "activity", color: "text-indigo-600", description: "The blue whale is a massive animal." },
-      { text: "随着音乐的响起，大家激动地跳起舞来。", segments: ["随着", "音乐", "的", "响起", "，", "大家", "激动地", "跳起", "舞来", "。"], icon: "smile", color: "text-pink-500", description: "Dancing excitedly to the music." },
-      { text: "我们依依不舍地告别了朋友，踏上了归途。", segments: ["我们", "依依不舍地", "告别了", "朋友", "，", "踏上了", "归途", "。"], icon: "users", color: "text-slate-500", description: "Saying goodbye reluctantly to friends." },
-      { text: "渐渐地，那只小船在海面上消失了。", segments: ["渐渐地", "，", "那只", "小船", "在", "海面上", "消失了", "。"], icon: "sunset", color: "text-orange-300", description: "A small boat vanishing gradually on the sea." }
-    ]
-  },
-  10: { title: "第十课 (Lesson 10)",
-    vocab: [
-      { word: "热线", pinyin: "rè xiàn", meaning: "Hotline", example: "你可以拨打热线向专业人士求助。" },
-      { word: "控制", pinyin: "kòng zhì", meaning: "Control / Restrain", example: "我们必须学会控制自己的情绪。" },
-      { word: "丰盛", pinyin: "fēng shèng", meaning: "Sumptuous / Rich", example: "妈妈准备了一顿丰盛的晚餐。" },
-      { word: "夹", pinyin: "jiā", meaning: "Pick up with chopsticks / Press from both sides", example: "他夹了一块肉放进口里。" },
-      { word: "唠叨", pinyin: "láo dao", meaning: "Nag / Chatter", example: "妈妈唠叨也是为了我们好。" },
-      { word: "刷子", pinyin: "shuā zi", meaning: "Brush", example: "他拿刷子把鞋子刷干净。" },
-      { word: "珍惜", pinyin: "zhēn xī", meaning: "Treasure / Cherish", example: "我们要珍惜现在的幸福生活。" },
-      { word: "嘲笑", pinyin: "cháo xiào", meaning: "Make fun of / Mock", example: "我们不应该嘲笑别人的缺点。" },
-      { word: "遮住", pinyin: "zhē zhù", meaning: "Cover / Hide", example: "大树遮住了阳光。" },
-      { word: "弯腰", pinyin: "wān yāo", meaning: "Bend down / Stoop", example: "他弯腰捡起了地上的垃圾。" },
-      { word: "惭愧", pinyin: "cán kuì", meaning: "Ashamed / Remorseful", example: "做错了事，他感到非常惭愧。" },
-      { word: "拥有", pinyin: "yōng yǒu", meaning: "Own / Possess", example: "我们要学会感恩所拥有的一切。" },
-      { word: "一段", pinyin: "yí duàn", meaning: "A period of (time) / A section", example: "这是一段令人难忘的回忆。" },
-      { word: "农夫", pinyin: "nóng fū", meaning: "Farmer", example: "农夫在田里辛勤地耕种。" },
-      { word: "隐形眼镜", pinyin: "yǐn xíng yǎn jìng", meaning: "Contact lenses", example: "戴隐形眼镜要注意卫生。" },
-      { word: "上瘾", pinyin: "shàng yǐn", meaning: "Addicted / Become addicted", example: "打电脑游戏很容易上瘾。" },
-      { word: "地址", pinyin: "dì zhǐ", meaning: "Address", example: "请告诉我你家的地址。" }
-    ],
-    sentences: [
-      { text: "我没带雨伞，结果被淋成了落汤鸡。", segments: ["我", "没带雨伞", "，", "结果", "被淋成了", "落汤鸡", "。"], icon: "cloud-rain", color: "text-blue-500", description: "Drenched like a soaked chicken after forgetting an umbrella." },
-      { text: "我家附近的公园鸟语花香，风景宜人。", segments: ["我家附近的", "公园", "鸟语花香", "，", "风景宜人", "。"], icon: "sun", color: "text-green-500", description: "A nearby park with singing birds, fragrant flowers, and pleasant scenery." },
-      { text: "听了妈妈的话，我鼻子一酸，眼泪流了下来。", segments: ["听了", "妈妈的话", "，", "我", "鼻子一酸", "，", "眼泪", "流了下来", "。"], icon: "frown", color: "text-yellow-500", description: "Feeling touched and tearful after hearing mom's words." },
-      { text: "他们俩你一句，我一句，脸红脖子粗地争吵起来。", segments: ["他们俩", "你一句", "，", "我一句", "，", "脸红脖子粗地", "争吵起来", "。"], icon: "message-square", color: "text-red-500", description: "Argued heatedly back and forth until turning red in the face." },
-      { text: "小光和小华是一对形影不离的好朋友，他们志同道合，无话不谈。", segments: ["小光和小华", "是", "一对", "形影不离的", "好朋友", "，", "他们", "志同道合", "，", "无话不谈", "。"], icon: "users", color: "text-purple-500", description: "Inseparable best friends sharing the same ideals and talking about everything." }
-    ]
-  },
-  11: { title: "第十一课 (Lesson 11)",
-    vocab: [
-      { word: "初级", pinyin: "chū jí", meaning: "Primary / Elementary", example: "他报名参加了初级游泳班。" },
-      { word: "详细", pinyin: "xiáng xì", meaning: "Detailed / Thorough", example: "老师详细地讲解了这道数学题。" },
-      { word: "彼此", pinyin: "bǐ cǐ", meaning: "Each other / One another", example: "好朋友之间应该彼此信任。" },
-      { word: "使", pinyin: "shǐ", meaning: "Make / Cause / Enable", example: "这次失败使他变得更加坚强。" },
-      { word: "基本", pinyin: "jī běn", meaning: "Basic / Fundamental", example: "我们已经完成了基本的工作。" },
-      { word: "胸口", pinyin: "xiōng kǒu", meaning: "Chest", example: "他感到胸口有些不舒服。" },
-      { word: "扣子", pinyin: "kòu zi", meaning: "Button", example: "你的衬衫扣子扣错了。" },
-      { word: "扑", pinyin: "pū", meaning: "Pounce on / Throw oneself at", example: "小狗兴奋地扑向主人。" },
-      { word: "有限", pinyin: "yǒu xiàn", meaning: "Limited / Finite", example: "个人的力量是有限的。" },
-      { word: "躲闪", pinyin: "duǒ shǎn", meaning: "Dodge / Evade", example: "面对问题，我们不能躲闪。" },
-      { word: "狠狠", pinyin: "hěn hěn", meaning: "Ferociously / Severely", example: "老师狠狠地批评了他。" },
-      { word: "恨", pinyin: "hèn", meaning: "Hate / Regret", example: "他恨自己没有早点听话。" },
-      { word: "尽早", pinyin: "jǐn zǎo", meaning: "As early as possible", example: "有病就要尽早去看医生。" },
-      { word: "扭打", pinyin: "niǔ dǎ", meaning: "Wrestle / Scuffle", example: "两个人在地上扭打成一团。" },
-      { word: "零", pinyin: "líng", meaning: "Zero", example: "今天气温下降到了零度。" },
-      { word: "至", pinyin: "zhì", meaning: "To / Until", example: "图书馆的开放时间是早上九点至下午五点。" },
-      { word: "衬衫", pinyin: "chèn shān", meaning: "Shirt", example: "爸爸穿着一件干净的白衬衫。" },
-      { word: "瞪", pinyin: "dèng", meaning: "Stare / Glare", example: "他生气地瞪了对方一眼。" }
-    ],
-    sentences: [
-      { text: "常言道：“人非圣贤，孰能无过。”", segments: ["常言道", "：", "“", "人非圣贤", "，", "孰能无过", "。", "”"], icon: "book-open", color: "text-indigo-500", description: "As the saying goes, no one is perfect and everyone makes mistakes." },
-      { text: "我感到十分惭愧，真不应该动手打人。", segments: ["我", "感到", "十分惭愧", "，", "真不应该", "动手打人", "。"], icon: "frown", color: "text-slate-500", description: "Feeling deeply ashamed for resorting to physical violence." },
-      { text: "我急得像热锅上的蚂蚁，恨不得插上翅膀飞回家。", segments: ["我", "急得像", "热锅上的蚂蚁", "，", "恨不得", "插上翅膀", "飞回家", "。"], icon: "zap", color: "text-orange-500", description: "Anxious like ants on a hot pan, wishing for wings to fly home." },
-      { text: "我不应该在事情还没有水落石出之前，就急于下定论。", segments: ["我", "不应该", "在事情", "还没有", "水落石出", "之前", "，", "就急于", "下定论", "。"], icon: "alert-circle", color: "text-red-400", description: "Should not jump to conclusions before the truth comes to light." },
-      { text: "考卷发下来后，我惊呆了，卷子上写着一个史无前例的低分。", segments: ["考卷", "发下来后", "，", "我", "惊呆了", "，", "卷子上", "写着", "一个", "史无前例的", "低分", "。"], icon: "file-text", color: "text-gray-500", description: "Shocked after receiving an unprecedented low score on the exam." }
-    ]
-  },
-  12: { title: "第十二课 (Lesson 12)",
-    vocab: [
-      { word: "著名", pinyin: "zhù míng", meaning: "Famous / Well-known", example: "这是一家著名的餐厅。" },
-      { word: "排列", pinyin: "pái liè", meaning: "Arrange / Array", example: "桌椅排列得很整齐。" },
-      { word: "气氛", pinyin: "qì fēn", meaning: "Atmosphere / Ambience", example: "晚会的气氛非常热烈。" },
-      { word: "佳", pinyin: "jiā", meaning: "Good / Excellent", example: "他获得了最佳表演奖。" },
-      { word: "唯一", pinyin: "wéi yī", meaning: "Only / Sole", example: "他是唯一通过考试的人。" },
-      { word: "呈现", pinyin: "chéng xiàn", meaning: "Present / Display", example: "舞台上呈现出一幅美丽的画面。" },
-      { word: "沉浸", pinyin: "chén jìn", meaning: "Immerse / Be steeped in", example: "大家都沉浸在胜利的喜悦中。" },
-      { word: "刺", pinyin: "cì", meaning: "Pierce / Sting", example: "强烈的阳光刺得我睁不开眼。" },
-      { word: "骄傲", pinyin: "jiāo ào", meaning: "Proud / Arrogant", example: "我们为他的优秀表现感到骄傲。" },
-      { word: "表演", pinyin: "biǎo yǎn", meaning: "Perform / Performance", example: "他们的表演赢得了精彩的掌声。" },
-      { word: "降临", pinyin: "jiàng lín", meaning: "Befall / Descend", example: "夜幕降临，街道上亮起了路灯。" },
-      { word: "荧光棒", pinyin: "yíng guāng bàng", meaning: "Glow stick", example: "观众们挥舞着手里的荧光棒。" },
-      { word: "盼望", pinyin: "pàn wàng", meaning: "Look forward to / Long for", example: "我们都在盼望假期的到来。" },
-      { word: "夜幕", pinyin: "yè mù", meaning: "Curtain of night / Nightfall", example: "夜幕降临，繁星点点。" },
-      { word: "战斗机", pinyin: "zhàn dòu jī", meaning: "Fighter jet", example: "战斗机在蓝天飞过。" },
-      { word: "五彩缤纷", pinyin: "wǔ cǎi bīn fēn", meaning: "Colorful / Multi-colored", example: "夜空中绽放着五彩缤纷的烟花。" },
-      { word: "自豪", pinyin: "zì háo", meaning: "Proud (of achievement/identity)", example: "作为一个新加坡人，我感到很自豪。" },
-      { word: "宽阔", pinyin: "kuān kuò", meaning: "Spacious / Wide", example: "马路非常宽阔。" }
-    ],
-    sentences: [
-      { text: "晶莹的泪水，像断了线的珍珠，滚下她的脸颊。", segments: ["晶莹的", "泪水", "，", "像", "断了线的珍珠", "，", "滚下", "她的脸颊", "。"], icon: "droplet", color: "text-blue-400", description: "Sparkling tears rolled down her cheeks like a broken string of pearls." },
-      { text: "于是，我装出若无其事的样子，走进屋里。", segments: ["于是", "，", "我", "装出", "若无其事的", "样子", "，", "走进", "屋里", "。"], icon: "smile", color: "text-gray-400", description: "Pretending as if nothing had happened while walking into the room." },
-      { text: "盼望已久的假期终于来到了，我早就精心制订了假期计划。", segments: ["盼望已久的", "假期", "终于来到了", "，", "我早就", "精心制订了", "假期计划", "。"], icon: "calendar", color: "text-green-400", description: "Long-awaited vacation finally arrived with a meticulously prepared plan." },
-      { text: "购物中心的货物琳琅满目，看得人眼花缭乱。", segments: ["购物中心的", "货物", "琳琅满目", "，", "看得人", "眼花缭乱", "。"], icon: "shopping-bag", color: "text-purple-400", description: "Dazzled by the overwhelming variety of goods in the shopping mall." },
-      { text: "不知不觉的，假期已接近尾声，可我的计划还只是计划。", segments: ["不知不觉的", "，", "假期", "已接近尾声", "，", "可我的计划", "还只是计划", "。"], icon: "clock", color: "text-amber-500", description: "The holiday is coming to an end, yet the plans remain unfulfilled." }
-    ]
-  },
-  13: { title: "第十三课 (Lesson 13)",
-    vocab: [
-      { word: "记录", pinyin: "jì lù", meaning: "Record / Note down", example: "他把会议内容详细地记录了下来。" },
-      { word: "不仅", pinyin: "bù jǐn", meaning: "Not only", example: "他不仅学习好，而且乐于助人。" },
-      { word: "佩服", pinyin: "pèi fú", meaning: "Admire", example: "大家都很佩服他的勇气。" },
-      { word: "骨", pinyin: "gǔ", meaning: "Bone", example: "小狗正在啃一块骨头。" },
-      { word: "官员", pinyin: "guān yuán", meaning: "Official", example: "政府官员来到现场视察。" },
-      { word: "违抗", pinyin: "wéi kàng", meaning: "Disobey / Defy", example: "我们不能违抗命令。" },
-      { word: "窄", pinyin: "zhǎi", meaning: "Narrow", example: "这条小路非常狭窄。" },
-      { word: "世界", pinyin: "shì jiè", meaning: "World", example: "这个世界充满了奇妙的事物。" },
-      { word: "询问", pinyin: "xún wèn", meaning: "Inquire / Ask about", example: "警察向他询问当时的情况。" },
-      { word: "派", pinyin: "pài", meaning: "Send / Dispatch", example: "学校派他去参加朗诵比赛。" },
-      { word: "艺术", pinyin: "yì shù", meaning: "Art", example: "她从小就对音乐艺术很感兴趣。" },
-      { word: "怀疑", pinyin: "huái yí", meaning: "Doubt / Suspect", example: "我不怀疑他的诚意。" },
-      { word: "恍然大悟", pinyin: "huǎng rán dà wù", meaning: "Suddenly realize / Dawn upon", example: "听了老师的讲解，我才恍然大悟。" },
-      { word: "产生", pinyin: "chǎn shēng", meaning: "Produce / Generate", example: "他们之间产生了误会。" },
-      { word: "墨", pinyin: "mò", meaning: "Ink", example: "他不小心把墨水泼到了桌上。" }
-    ],
-    sentences: [
-      { text: "老天爷好像故意跟我作对似的，骤然下起了滂沱大雨。", segments: ["老天爷", "好像", "故意和我作对似的", "，", "骤然", "下起了", "滂沱大雨", "。"], icon: "cloud-lightning", color: "text-blue-600", description: "It suddenly poured torrential rain as if heaven was intentionally against me." },
-      { text: "原本晴朗的天空，突然间乌云密布，雷电交加，接着大雨就倾盆而下。", segments: ["原本晴朗的", "天空", "，", "突然间", "乌云密布", "，", "雷电交加", "，", "接着", "大雨", "就倾盆而下", "。"], icon: "cloud-rain", color: "text-slate-600", description: "Clear sky suddenly filled with dark clouds, thunder, lightning, and heavy downpour." },
-      { text: "雨过天晴，空中出现一道彩虹，仿佛一座七彩桥挂在天上。", segments: ["雨过天晴", "，", "空中", "出现一道彩虹", "，", "仿佛", "一座七彩桥", "挂在天上", "。"], icon: "sun", color: "text-pink-400", description: "After the rain, a rainbow appeared in the sky like a seven-colored bridge." },
-      { text: "他好像换了两条腿，跑得如风似电。", segments: ["他", "好像换了两条腿", "，", "跑得", "如风似电", "。"], icon: "zap", color: "text-yellow-400", description: "Ran as fast as wind and lightning as if having a new pair of legs." },
-      { text: "他胸有成竹地说：“我们一定能成功！”", segments: ["他", "胸有成竹地", "说", "：", "“", "我们一定能成功", "！", "”"], icon: "check-circle", color: "text-emerald-500", description: "Said with full confidence that success is guaranteed." }
-    ]
-  },
-  14: { title: "第十四课 (Lesson 14)",
-    vocab: [
-      { word: "辛勤", pinyin: "xīn qín", meaning: "Hardworking / Diligent", example: "农民在田里辛勤劳动。" },
-      { word: "积极", pinyin: "jī jí", meaning: "Active / Positive", example: "我们要积极参与学校活动。" },
-      { word: "委屈", pinyin: "wěi qu", meaning: "Feel wronged / Grievance", example: "被误会后，他心里感到很委屈。" },
-      { word: "甲", pinyin: "jiǎ", meaning: "First (A in A/B options)", example: "他在考试中得了甲等。" },
-      { word: "顽皮", pinyin: "wán pí", meaning: "Naughty / Mischievous", example: "这孩子非常顽皮，总是捉弄人。" },
-      { word: "加倍", pinyin: "jiā bèi", meaning: "Double / Redouble", example: "为了取得好成绩，他加倍努力。" },
-      { word: "温柔", pinyin: "wēn róu", meaning: "Gentle / Tender", example: "妈妈用温柔的声音安慰我。" },
-      { word: "乙", pinyin: "yǐ", meaning: "Second (B in A/B options)", example: "甲组和乙组展开了激烈的比赛。" },
-      { word: "培育", pinyin: "péi yù", meaning: "Nurture / Cultivate", example: "老师辛苦培育每一位学生。" },
-      { word: "成绩", pinyin: "chéng jì", meaning: "Results / Grades", example: "通过努力，他的成绩有了很大的提高。" },
-      { word: "恢复", pinyin: "huī fù", meaning: "Recover / Restore", example: "经过休息，他的身体已经恢复健康。" },
-      { word: "诗", pinyin: "shī", meaning: "Poetry / Poem", example: "老师教大家背诵古诗。" },
-      { word: "犯错", pinyin: "fàn cuò", meaning: "Make a mistake", example: "知错能改比不犯错更重要。" },
-      { word: "钻进", pinyin: "zuān jìn", meaning: "Get into / Burrow into", example: "小猫钻进了被窝里。" },
-      { word: "涌上心头", pinyin: "yǒng shàng xīn tóu", meaning: "Well up in one's heart / Surge into mind", example: "看着旧照片，往事纷纷涌上心头。" },
-      { word: "并", pinyin: "bìng", meaning: "And / Furthermore", example: "他完成了作业，并复习了课文。" },
-      { word: "宣布", pinyin: "xuān bù", meaning: "Announce / Declare", example: "校长宣布了比赛结果。" },
-      { word: "祈祷", pinyin: "qí dǎo", meaning: "Pray", example: "大家都在默默地为他祈祷。" }
-    ],
-    sentences: [
-      { text: "老师经常提问，同学们都争先恐后地举手回答。", segments: ["老师", "经常提问", "，", "同学们都", "争先恐后地", "举手回答", "。"], icon: "hand", color: "text-teal-500", description: "Students eagerly vie with each other to raise hands and answer the teacher's questions." },
-      { text: "看到学生们在课室里玩闹，林老师板着脸，插着腰站在课室门外。", segments: ["看到", "学生们", "在课室里玩闹", "，", "林老师", "板着脸", "，", "插着腰", "站在课室门外", "。"], icon: "alert-triangle", color: "text-rose-500", description: "Teacher Lin stood outside the classroom with a stern face and hands on hips." },
-      { text: "下午，天空万里无云，火辣辣的太阳在头顶上烘烤着。", segments: ["下午", "，", "天空", "万里无云", "，", "火辣辣的", "太阳", "在头顶上", "烘烤着", "。"], icon: "sun", color: "text-orange-500", description: "Cloudless sky in the afternoon with scorching sun baking overhead." },
-      { text: "我的心中像是打翻了五味瓶，酸甜苦辣咸交织在一起。", segments: ["我的心中", "像是", "打翻了五味瓶", "，", "酸甜苦辣咸", "交织在一起", "。"], icon: "heart", color: "text-purple-500", description: "Overwhelmed with mixed feelings like a overturned jar of spices." },
-      { text: "看到心爱的小狗病得那么严重，我难过得泣不成声。", segments: ["看到", "心爱的小狗", "病得那么严重", "，", "我", "难过得", "泣不成声", "。"], icon: "frown", color: "text-blue-500", description: "Choked up with tears seeing my beloved puppy so seriously ill." }
-    ]
-  }
-};
 
 /* ---------------- State ---------------- */
 const state = {
@@ -457,23 +112,71 @@ const state = {
   practicePhase: 'tingxie', // 'tingxie' | 'moxie'
   isPracticeComplete: false,
   gameSelection: [],
-  userSelection: []
+  userSelection: [],
+
+  // Data-loading state
+  lessonIndex: null,      // [{id, title}, ...] — loaded once for the homepage
+  lessonCache: {},         // { [id]: full lesson object } — loaded on demand
+  loadingIndex: false,
+  loadingLesson: false,
+  loadError: null
 };
 
-function activeLessonData() { return state.currentLesson ? DATA[state.currentLesson] : null; }
+const LESSONS_BASE_URL = 'lessons'; // folder of JSON files served alongside this HTML
+
+async function loadLessonIndex() {
+  if (state.lessonIndex || state.loadingIndex) return;
+  state.loadingIndex = true;
+  state.loadError = null;
+  render();
+  try {
+    const res = await fetch(`${LESSONS_BASE_URL}/index.json`);
+    if (!res.ok) throw new Error(`Failed to load lesson index (${res.status})`);
+    state.lessonIndex = await res.json();
+  } catch (err) {
+    console.error(err);
+    state.loadError = '课程列表加载失败，请检查网络连接。'; // "Failed to load lesson list"
+  } finally {
+    state.loadingIndex = false;
+    render();
+  }
+}
+
+async function loadLesson(num) {
+  if (state.lessonCache[num]) return state.lessonCache[num]; // cache hit, no fetch
+  state.loadingLesson = true;
+  state.loadError = null;
+  render();
+  try {
+    const res = await fetch(`${LESSONS_BASE_URL}/${num}.json`);
+    if (!res.ok) throw new Error(`Failed to load lesson ${num} (${res.status})`);
+    const data = await res.json();
+    state.lessonCache[num] = data;
+    return data;
+  } catch (err) {
+    console.error(err);
+    state.loadError = '课程内容加载失败，请检查网络连接。'; // "Failed to load lesson content"
+    return null;
+  } finally {
+    state.loadingLesson = false;
+    render();
+  }
+}
+
+function activeLessonData() { return state.currentLesson ? state.lessonCache[state.currentLesson] : null; }
 function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
 
 /* ---------------- Navigation / actions ---------------- */
 function goSelection() { state.view = 'selection'; playSound('flip'); render(); }
 
-function selectLesson(num) {
+async function selectLesson(num) {
   state.currentLesson = num;
   state.view = 'learn';
   state.subTab = 'vocab';
   state.currentIndex = 0;
   state.isFlipped = false;
   playSound('flip');
-  render();
+  await loadLesson(num); // renders a loading state itself, then re-renders when done
 }
 
 function goLearn() {
@@ -617,45 +320,85 @@ function render() {
 }
 
 function renderSelection() {
-  const lessonNums = Object.keys(DATA).map(Number).sort((a,b) => a - b);
-  const cards = lessonNums.map(num => `
-    <button onclick="selectLesson(${num})" class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-slate-100 hover:border-indigo-400 hover:-translate-y-2 transition-all text-left group">
-      <div class="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-        ${icon('book-open', 'w-6 h-6')}
-      </div>
-      <h3 class="text-2xl font-bold text-slate-800 mb-2">第 ${num} 课</h3>
-      <p class="text-slate-400 font-medium">${DATA[num].title}</p>
-      <div class="mt-6 flex items-center gap-2 text-indigo-600 font-bold text-sm">
-        开始学习 ${icon('arrow-right', 'w-4 h-4')}
-      </div>
+  // Kick off the index fetch the first time we land here (no-op if already loaded/loading)
+  loadLessonIndex();
+
+  if (state.loadingIndex && !state.lessonIndex) {
+    return renderLoadingScreen('课程列表加载中...');
+  }
+  if (state.loadError && !state.lessonIndex) {
+    return renderErrorScreen(state.loadError, 'loadLessonIndex()');
+  }
+
+  const palette = [
+    { bg: 'bg-rose-200',    hover: 'hover:bg-rose-300',    text: 'text-rose-900' },
+    { bg: 'bg-amber-200',   hover: 'hover:bg-amber-300',   text: 'text-amber-900' },
+    { bg: 'bg-lime-200',    hover: 'hover:bg-lime-300',    text: 'text-lime-900' },
+    { bg: 'bg-teal-200',    hover: 'hover:bg-teal-300',    text: 'text-teal-900' },
+    { bg: 'bg-sky-200',     hover: 'hover:bg-sky-300',     text: 'text-sky-900' },
+    { bg: 'bg-violet-200',  hover: 'hover:bg-violet-300',  text: 'text-violet-900' },
+    { bg: 'bg-fuchsia-200', hover: 'hover:bg-fuchsia-300', text: 'text-fuchsia-900' },
+  ];
+  const cards = state.lessonIndex.map((lesson, i) => {
+    const c = palette[i % palette.length];
+    return `
+    <button onclick="selectLesson(${lesson.id})" class="${c.bg} ${c.hover} ${c.text} aspect-square rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex items-center justify-center">
+      <span class="text-xl font-black tracking-tight">第 ${lesson.id} 课</span>
     </button>
-  `).join('');
+  `;
+  }).join('');
 
   return `
-  <div class="min-h-screen bg-slate-50 flex items-center justify-center p-6">
-    <div class="max-w-4xl w-full">
-      <header class="text-center mb-12">
-        <h1 class="text-4xl font-black text-indigo-900 mb-4 tracking-tight">华文学习平台</h1>
-        <p class="text-slate-500 font-medium">请选择课次开始学习</p>
+  <div class="min-h-screen bg-gradient-to-br from-violet-50 via-rose-50 to-sky-50 flex items-center justify-center p-6">
+    <div class="max-w-3xl w-full">
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-black text-violet-900 mb-3 tracking-tight">华文学习平台</h1>
+        <p class="text-violet-400 font-medium">请选择课次开始学习</p>
       </header>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${cards}</div>
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">${cards}</div>
+    </div>
+  </div>`;
+}
+
+function renderLoadingScreen(message) {
+  return `
+  <div class="min-h-screen bg-gradient-to-br from-violet-50 via-rose-50 to-sky-50 flex items-center justify-center p-6">
+    <div class="text-center">
+      <div class="w-12 h-12 border-4 border-violet-200 border-t-violet-500 rounded-full animate-spin mx-auto mb-4"></div>
+      <p class="text-violet-400 font-bold">${message}</p>
+    </div>
+  </div>`;
+}
+
+function renderErrorScreen(message, retryFnCall) {
+  return `
+  <div class="min-h-screen bg-gradient-to-br from-violet-50 via-rose-50 to-sky-50 flex items-center justify-center p-6">
+    <div class="text-center max-w-sm">
+      <p class="text-rose-500 font-bold mb-4">${message}</p>
+      <button onclick="${retryFnCall}" class="px-6 py-3 bg-violet-400 text-white rounded-2xl font-black text-sm hover:bg-violet-500 transition-all">重试</button>
+      <button onclick="goSelection()" class="block mt-3 mx-auto text-violet-400 text-sm font-bold hover:text-violet-600">返回选择课次</button>
     </div>
   </div>`;
 }
 
 function renderLesson() {
   const L = activeLessonData();
+
+  if (state.loadingLesson && !L) return renderLoadingScreen('课程加载中...');
+  if (state.loadError && !L) return renderErrorScreen(state.loadError, `loadLesson(${state.currentLesson})`);
+  if (!L) return renderLoadingScreen('课程加载中...'); // fallback safety net
+
   return `
-  <div class="min-h-screen bg-slate-50 p-4 md:p-8 select-none">
+  <div class="min-h-screen bg-gradient-to-br from-violet-50 via-rose-50 to-sky-50 p-4 md:p-8 select-none">
     <div class="max-w-2xl mx-auto">
-      <header class="mb-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+      <header class="mb-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-2xl shadow-sm border border-violet-100">
         <div class="flex items-center gap-4">
-          <button onclick="goSelection()" class="p-2 hover:bg-slate-100 rounded-lg text-slate-400">${icon('home','w-5 h-5')}</button>
-          <h1 class="text-xl font-black text-indigo-800 uppercase tracking-tight">${L.title}</h1>
+          <button onclick="goSelection()" class="p-2 hover:bg-violet-50 rounded-lg text-violet-300">${icon('home','w-5 h-5')}</button>
+          <h1 class="text-xl font-black text-violet-800 uppercase tracking-tight">${L.title}</h1>
         </div>
-        <div class="flex bg-slate-100 p-1 rounded-xl">
-          <button onclick="goLearn()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'learn' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500'}">学习</button>
-          <button onclick="startPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500'}">听写练习</button>
+        <div class="flex bg-violet-50 p-1 rounded-xl">
+          <button onclick="goLearn()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'learn' ? 'bg-white text-violet-600 shadow-sm' : 'text-violet-300'}">学习</button>
+          <button onclick="startPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-violet-600 shadow-sm' : 'text-violet-300'}">听写练习</button>
         </div>
       </header>
       ${state.view === 'learn' ? renderLearn(L) : renderPractice()}
@@ -670,10 +413,10 @@ function renderLesson() {
 function renderLearn(L) {
   const tabs = `
     <div class="flex gap-4 mb-6">
-      <button onclick="setSubTab('vocab')" class="flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl border-2 transition-all ${state.subTab === 'vocab' ? 'bg-indigo-50 border-indigo-500 text-indigo-700' : 'bg-white border-transparent text-slate-500'}">
+      <button onclick="setSubTab('vocab')" class="flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl border-2 transition-all ${state.subTab === 'vocab' ? 'bg-amber-100 border-amber-300 text-amber-700' : 'bg-white border-transparent text-slate-400'}">
         ${icon('book-open','w-5 h-5')}<span class="font-black tracking-widest">学词语</span>
       </button>
-      <button onclick="setSubTab('sentence')" class="flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl border-2 transition-all ${state.subTab === 'sentence' ? 'bg-indigo-50 border-indigo-500 text-indigo-700' : 'bg-white border-transparent text-slate-500'}">
+      <button onclick="setSubTab('sentence')" class="flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl border-2 transition-all ${state.subTab === 'sentence' ? 'bg-sky-100 border-sky-300 text-sky-700' : 'bg-white border-transparent text-slate-400'}">
         ${icon('gamepad-2','w-5 h-5')}<span class="font-black tracking-widest">学默写</span>
       </button>
     </div>`;
@@ -683,9 +426,9 @@ function renderLearn(L) {
 
   const nav = `
     <div class="flex justify-between items-center mt-12">
-      <button onclick="handlePrev()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-xl text-indigo-600 hover:scale-110 transition-all border border-slate-100">${icon('chevron-left','w-8 h-8')}</button>
-      <p class="font-black text-slate-300 tracking-[0.3em] uppercase text-xs">${state.currentIndex + 1} / ${total}</p>
-      <button onclick="handleNext()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-xl text-indigo-600 hover:scale-110 transition-all border border-slate-100">${icon('chevron-right','w-8 h-8')}</button>
+      <button onclick="handlePrev()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-md text-violet-400 hover:scale-110 transition-all border border-violet-100">${icon('chevron-left','w-8 h-8')}</button>
+      <p class="font-black text-violet-300 tracking-[0.3em] uppercase text-xs">${state.currentIndex + 1} / ${total}</p>
+      <button onclick="handleNext()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-md text-violet-400 hover:scale-110 transition-all border border-violet-100">${icon('chevron-right','w-8 h-8')}</button>
     </div>`;
 
   return `${tabs}<div class="min-h-[500px]">${body}${nav}</div>`;
@@ -697,20 +440,20 @@ function renderVocabCard(L) {
   <div class="flex flex-col items-center">
     <div onclick="toggleFlip()" class="w-full max-w-sm aspect-[4/5] cursor-pointer perspective-1000 relative">
       <div class="flip-inner ${state.isFlipped ? 'flipped' : ''}" style="width:100%;height:100%;">
-        <div class="flip-face backface-hidden bg-white rounded-[3rem] shadow-2xl flex flex-col items-center justify-center p-12 border-b-[12px] border-slate-100">
-          <span class="text-8xl font-black text-slate-800 tracking-tighter">${item.word}</span>
-          <p class="absolute bottom-12 text-slate-300 font-black text-[10px] tracking-[0.4em] uppercase">点击查看详情</p>
+        <div class="flip-face backface-hidden bg-white rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-12 border-b-[12px] border-amber-100">
+          <span class="text-8xl font-black text-violet-900 tracking-tighter">${item.word}</span>
+          <p class="absolute bottom-12 text-violet-200 font-black text-[10px] tracking-[0.4em] uppercase">点击查看详情</p>
         </div>
-        <div class="flip-face flip-back backface-hidden bg-indigo-50 rounded-[3rem] shadow-2xl flex flex-col items-center justify-center p-10 border-b-[12px] border-indigo-400">
+        <div class="flip-face flip-back backface-hidden bg-amber-50 rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-10 border-b-[12px] border-amber-300">
           <div class="text-center mb-8">
-            <h3 class="text-5xl font-black text-slate-900 mb-2">${item.word}</h3>
-            <p class="text-2xl text-indigo-600 font-bold">${item.pinyin}</p>
-            <p class="text-xl text-slate-500 italic mt-2">${item.meaning}</p>
+            <h3 class="text-5xl font-black text-violet-900 mb-2">${item.word}</h3>
+            <p class="text-2xl text-amber-500 font-bold">${item.pinyin}</p>
+            <p class="text-xl text-violet-400 italic mt-2">${item.meaning}</p>
           </div>
-          <div class="w-full h-px bg-indigo-200 mb-8"></div>
+          <div class="w-full h-px bg-amber-200 mb-8"></div>
           <div class="bg-white/90 p-6 rounded-3xl w-full text-center relative">
-            ${item.example ? `<p class="text-xl font-bold text-slate-700 leading-relaxed mb-6">${item.example}</p>` : ''}
-            <button onclick="event.stopPropagation(); speakText('${(item.example || item.word).replace(/'/g, "\\'")}', this)" class="p-3 rounded-full bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition-all">${icon('volume-2','w-6 h-6')}</button>
+            ${item.example ? `<p class="text-xl font-bold text-violet-700 leading-relaxed mb-6">${item.example}</p>` : ''}
+            <button onclick="event.stopPropagation(); speakText('${(item.example || item.word).replace(/'/g, "\\'")}', this)" class="p-3 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-all">${icon('volume-2','w-6 h-6')}</button>
           </div>
         </div>
       </div>
@@ -720,26 +463,26 @@ function renderVocabCard(L) {
 
 function renderSentenceGame(L) {
   const s = L.sentences[state.currentIndex];
-  const userChips = state.userSelection.map(w => `<span class="px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-md font-bold text-xl">${w}</span>`).join('');
-  const options = state.gameSelection.map((w, idx) => `<button onclick="pickSegment('${w.replace(/'/g,"\\'")}', ${idx})" class="px-5 py-3 bg-white border-2 border-slate-200 hover:border-indigo-500 hover:text-indigo-600 rounded-2xl transition-all font-black text-2xl shadow-sm active:scale-90">${w}</button>`).join('');
+  const userChips = state.userSelection.map(w => `<span class="px-4 py-2 bg-sky-400 text-white rounded-xl shadow-sm font-bold text-xl">${w}</span>`).join('');
+  const options = state.gameSelection.map((w, idx) => `<button onclick="pickSegment('${w.replace(/'/g,"\\'")}', ${idx})" class="px-5 py-3 bg-white border-2 border-sky-100 hover:border-sky-400 hover:text-sky-600 rounded-2xl transition-all font-black text-2xl shadow-sm active:scale-90">${w}</button>`).join('');
 
   return `
-  <div class="bg-white rounded-[3rem] shadow-2xl p-10 border-b-[12px] border-slate-100">
+  <div class="bg-white rounded-[3rem] shadow-lg p-10 border-b-[12px] border-sky-100">
     <div class="flex flex-col items-center mb-8">
-      <div class="p-8 bg-indigo-50 rounded-full mb-6 ring-8 ring-indigo-50/50">${icon(s.icon, 'w-16 h-16 ' + s.color)}</div>
-      <p class="text-slate-400 text-[10px] font-black tracking-[0.4em] mb-2 uppercase">场景</p>
-      <p class="text-slate-600 text-center text-lg font-bold italic px-4">${s.description}</p>
+      <div class="p-8 bg-sky-50 rounded-full mb-6 ring-8 ring-sky-50/50">${icon(s.icon, 'w-16 h-16 ' + s.color)}</div>
+      <p class="text-sky-300 text-[10px] font-black tracking-[0.4em] mb-2 uppercase">场景</p>
+      <p class="text-violet-500 text-center text-lg font-bold italic px-4">${s.description}</p>
     </div>
-    <div class="min-h-[120px] mb-8 p-6 bg-slate-50 rounded-[2rem] border-4 border-dashed border-slate-200 flex flex-wrap gap-2 items-center justify-center">${userChips}</div>
+    <div class="min-h-[120px] mb-8 p-6 bg-sky-50 rounded-[2rem] border-4 border-dashed border-sky-200 flex flex-wrap gap-2 items-center justify-center">${userChips}</div>
     <div class="flex flex-wrap gap-3 justify-center mb-10">${options}</div>
-    <div class="flex justify-between items-center pt-8 border-t border-slate-100">
-      <button onclick="resetLearnSentence()" class="text-slate-400 hover:text-indigo-600 flex items-center gap-2 font-black text-xs tracking-widest">${icon('rotate-cw','w-4 h-4')} 重置</button>
-      <button onclick="toggleFlip()" class="text-indigo-600 font-black text-xs tracking-widest border-2 border-indigo-600 px-4 py-2 rounded-full hover:bg-indigo-600 hover:text-white transition-all uppercase">${state.isFlipped ? '隐藏答案' : '显示答案'}</button>
+    <div class="flex justify-between items-center pt-8 border-t border-sky-100">
+      <button onclick="resetLearnSentence()" class="text-violet-300 hover:text-sky-600 flex items-center gap-2 font-black text-xs tracking-widest">${icon('rotate-cw','w-4 h-4')} 重置</button>
+      <button onclick="toggleFlip()" class="text-sky-500 font-black text-xs tracking-widest border-2 border-sky-400 px-4 py-2 rounded-full hover:bg-sky-400 hover:text-white transition-all uppercase">${state.isFlipped ? '隐藏答案' : '显示答案'}</button>
     </div>
     ${state.isFlipped ? `
     <div class="mt-8 flex flex-col items-center gap-4 animate-in">
-      <p class="text-center text-3xl font-black text-indigo-700 leading-relaxed">${s.text}</p>
-      <button onclick="speakText('${s.text.replace(/'/g,"\\'")}', this)" class="p-3 rounded-full bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition-all">${icon('volume-2','w-6 h-6')}</button>
+      <p class="text-center text-3xl font-black text-sky-600 leading-relaxed">${s.text}</p>
+      <button onclick="speakText('${s.text.replace(/'/g,"\\'")}', this)" class="p-3 rounded-full bg-sky-100 text-sky-600 hover:bg-sky-200 transition-all">${icon('volume-2','w-6 h-6')}</button>
     </div>` : ''}
   </div>`;
 }
@@ -748,13 +491,13 @@ function renderPractice() {
   if (state.isPracticeComplete) {
     return `
     <div class="flex flex-col items-center min-h-[550px]">
-      <div class="w-full bg-white rounded-[3rem] p-16 text-center shadow-2xl flex flex-col items-center border-b-[12px] border-slate-100">
-        <div class="w-32 h-32 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-8">${icon('check','w-16 h-16')}</div>
-        <h2 class="text-4xl font-black text-slate-800 mb-4 tracking-tighter">练习完成!</h2>
-        <p class="text-slate-500 font-bold mb-10 text-lg">做得好! 你已经掌握了第 ${state.currentLesson} 课。</p>
+      <div class="w-full bg-white rounded-[3rem] p-16 text-center shadow-lg flex flex-col items-center border-b-[12px] border-emerald-100">
+        <div class="w-32 h-32 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center mb-8">${icon('check','w-16 h-16')}</div>
+        <h2 class="text-4xl font-black text-violet-900 mb-4 tracking-tighter">练习完成!</h2>
+        <p class="text-violet-400 font-bold mb-10 text-lg">做得好! 你已经掌握了第 ${state.currentLesson} 课。</p>
         <div class="flex gap-4">
-          <button onclick="goSelection()" class="px-8 py-4 bg-slate-100 text-slate-700 rounded-2xl font-black uppercase text-sm tracking-widest hover:bg-slate-200 transition-all">选择课次</button>
-          <button onclick="startPractice()" class="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition-all">重新开始</button>
+          <button onclick="goSelection()" class="px-8 py-4 bg-violet-50 text-violet-600 rounded-2xl font-black uppercase text-sm tracking-widest hover:bg-violet-100 transition-all">选择课次</button>
+          <button onclick="startPractice()" class="px-8 py-4 bg-violet-400 text-white rounded-2xl font-black uppercase text-sm tracking-widest shadow-md hover:bg-violet-500 transition-all">重新开始</button>
         </div>
       </div>
     </div>`;
@@ -763,12 +506,12 @@ function renderPractice() {
   const item = state.practiceQueue[state.currentIndex];
   const front = state.practicePhase === 'tingxie'
     ? `<div class="text-center">
-         <p class="text-5xl font-black text-indigo-600 mb-4 tracking-tight">${item?.pinyin || ''}</p>
-         <p class="text-2xl text-slate-400 italic font-bold">${item?.meaning || ''}</p>
+         <p class="text-5xl font-black text-violet-500 mb-4 tracking-tight">${item?.pinyin || ''}</p>
+         <p class="text-2xl text-violet-300 italic font-bold">${item?.meaning || ''}</p>
        </div>`
     : `<div class="flex flex-col items-center text-center">
-         <div class="p-8 bg-slate-50 rounded-full mb-8 ring-8 ring-indigo-50">${icon(item?.icon, 'w-16 h-16 ' + (item?.color || ''))}</div>
-         <p class="text-xl text-slate-600 font-black tracking-tight leading-snug">${item?.description || ''}</p>
+         <div class="p-8 bg-violet-50 rounded-full mb-8 ring-8 ring-violet-50">${icon(item?.icon, 'w-16 h-16 ' + (item?.color || ''))}</div>
+         <p class="text-xl text-violet-600 font-black tracking-tight leading-snug">${item?.description || ''}</p>
        </div>`;
   const back = state.practicePhase === 'tingxie'
     ? `<span class="text-white font-black leading-tight text-center text-9xl tracking-tighter">${item?.word || ''}</span>`
@@ -778,33 +521,33 @@ function renderPractice() {
   <div class="flex flex-col items-center min-h-[550px]">
     <div class="w-full mb-8 flex justify-between items-end">
       <div>
-        <span class="text-[10px] font-black text-indigo-400 uppercase tracking-[0.4em] block mb-1">练习阶段</span>
-        <h2 class="text-3xl font-black text-slate-800">${state.practicePhase === 'tingxie' ? '听写测试' : '默写测试'}</h2>
+        <span class="text-[10px] font-black text-violet-300 uppercase tracking-[0.4em] block mb-1">练习阶段</span>
+        <h2 class="text-3xl font-black text-violet-900">${state.practicePhase === 'tingxie' ? '听写测试' : '默写测试'}</h2>
       </div>
-      <div class="bg-indigo-50 px-4 py-2 rounded-2xl">
-        <span class="text-[10px] font-black text-indigo-400 uppercase tracking-widest block text-right mb-1">进度</span>
-        <p class="text-2xl font-black text-indigo-600">${state.currentIndex + 1} / ${state.practiceQueue.length}</p>
+      <div class="bg-violet-50 px-4 py-2 rounded-2xl">
+        <span class="text-[10px] font-black text-violet-300 uppercase tracking-widest block text-right mb-1">进度</span>
+        <p class="text-2xl font-black text-violet-500">${state.currentIndex + 1} / ${state.practiceQueue.length}</p>
       </div>
     </div>
 
     <div onclick="toggleFlip()" class="w-full max-w-sm aspect-[4/5] cursor-pointer perspective-1000 relative">
       <div class="flip-inner ${state.isFlipped ? 'flipped' : ''}" style="width:100%;height:100%;">
-        <div class="flip-face backface-hidden bg-white rounded-[3rem] shadow-2xl flex flex-col items-center justify-center p-12 border-b-[12px] border-amber-100">
+        <div class="flip-face backface-hidden bg-white rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-12 border-b-[12px] border-amber-100">
           ${front}
-          <p class="absolute bottom-12 text-slate-300 font-black text-[10px] tracking-[0.4em] uppercase">点击查看答案</p>
+          <p class="absolute bottom-12 text-violet-200 font-black text-[10px] tracking-[0.4em] uppercase">点击查看答案</p>
         </div>
-        <div class="flip-face flip-back backface-hidden bg-indigo-700 rounded-[3rem] shadow-2xl flex flex-col items-center justify-center p-12 border-b-[12px] border-indigo-950">
+        <div class="flip-face flip-back backface-hidden bg-violet-400 rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-12 border-b-[12px] border-violet-500">
           ${back}
         </div>
       </div>
     </div>
 
     <div class="w-full max-w-sm grid grid-cols-2 gap-6 mt-12">
-      <button onclick="event.stopPropagation(); handlePracticeMissed()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl border-b-8 border-red-50 text-red-500 hover:bg-red-50 transition-all group active:scale-95">
+      <button onclick="event.stopPropagation(); handlePracticeMissed()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl border-b-8 border-rose-100 text-rose-400 hover:bg-rose-50 transition-all group active:scale-95">
         ${icon('x','w-10 h-10 mb-2 group-hover:scale-125 transition-transform')}
         <span class="font-black text-xs tracking-widest uppercase">记错了</span>
       </button>
-      <button onclick="event.stopPropagation(); handlePracticeCorrect()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl border-b-8 border-green-50 text-green-600 hover:bg-green-50 transition-all group active:scale-95">
+      <button onclick="event.stopPropagation(); handlePracticeCorrect()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl border-b-8 border-emerald-100 text-emerald-500 hover:bg-emerald-50 transition-all group active:scale-95">
         ${icon('check','w-10 h-10 mb-2 group-hover:scale-125 transition-transform')}
         <span class="font-black text-xs tracking-widest uppercase">记住了</span>
       </button>
