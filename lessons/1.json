@@ -1,0 +1,205 @@
+{
+  "title": "第一课 (Lesson 1)",
+  "vocab": [
+    {
+      "word": "露营",
+      "pinyin": "lù yíng",
+      "meaning": "Camping",
+      "example": "我们全家去年去森林露营。"
+    },
+    {
+      "word": "一顿饭",
+      "pinyin": "yí dùn fàn",
+      "meaning": "A meal",
+      "example": "妈妈为我们准备了一顿饭。"
+    },
+    {
+      "word": "单独",
+      "pinyin": "dān dú",
+      "meaning": "Alone / Individually",
+      "example": "他不习惯单独一个人呆在家里。"
+    },
+    {
+      "word": "绑",
+      "pinyin": "bǎng",
+      "meaning": "Tie / Bind",
+      "example": "他用绳子把木头绑在一起。"
+    },
+    {
+      "word": "集合",
+      "pinyin": "jí hé",
+      "meaning": "Gather / Assemble",
+      "example": "老师叫大家在操场集合。"
+    },
+    {
+      "word": "狼吞虎咽",
+      "pinyin": "láng tūn hǔ yàn",
+      "meaning": "Wolf down / Gobble up",
+      "example": "他太饿了，一下子就狼吞虎咽地吃完了。"
+    },
+    {
+      "word": "贵重",
+      "pinyin": "guì zhòng",
+      "meaning": "Valuable / Precious",
+      "example": "这些是贵重物品，要小心保管。"
+    },
+    {
+      "word": "摔倒",
+      "pinyin": "shuāi dǎo",
+      "meaning": "Fall down",
+      "example": "他不小心摔倒在地上。"
+    },
+    {
+      "word": "袜子",
+      "pinyin": "wà zi",
+      "meaning": "Socks",
+      "example": "你应该每天换干净的袜子。"
+    },
+    {
+      "word": "感到充实",
+      "pinyin": "gǎn dào chōng shí",
+      "meaning": "Feel fulfilled",
+      "example": "今天帮邻居做家务，我感到很充实。"
+    },
+    {
+      "word": "冠军",
+      "pinyin": "guàn jūn",
+      "meaning": "Champion",
+      "example": "他在长跑比赛中得了冠军。"
+    },
+    {
+      "word": "轮",
+      "pinyin": "lún",
+      "meaning": "Turn / Wheel",
+      "example": "现在轮到你上场表演了。"
+    },
+    {
+      "word": "探险",
+      "pinyin": "tàn xiǎn",
+      "meaning": "Explore / Adventure",
+      "example": "孩子们喜欢在后山探险。"
+    },
+    {
+      "word": "齐心协力",
+      "pinyin": "qí xīn xié lì",
+      "meaning": "Work together",
+      "example": "大家齐心协力，终于完成了任务。"
+    },
+    {
+      "word": "禁止",
+      "pinyin": "jìn zhǐ",
+      "meaning": "Prohibit / Ban",
+      "example": "这里禁止吸烟。"
+    },
+    {
+      "word": "配合",
+      "pinyin": "pèi hé",
+      "meaning": "Coordinate / Cooperate",
+      "example": "这次活动需要大家的紧密配合。"
+    },
+    {
+      "word": "擦",
+      "pinyin": "cā",
+      "meaning": "Wipe / Rub",
+      "example": "他用毛巾擦了擦脸上的汗。"
+    },
+    {
+      "word": "防止",
+      "pinyin": "fáng zhǐ",
+      "meaning": "Prevent",
+      "example": "洗手可以防止病菌传播。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "听到喊声，他不管三七二十一，跳下水救人。",
+      "segments": [
+        "听到",
+        "喊声",
+        "，",
+        "他",
+        "不管三七二十一",
+        "，",
+        "跳下水",
+        "救人",
+        "。"
+      ],
+      "icon": "activity",
+      "color": "text-blue-500",
+      "description": "Regardless of consequences, jumping in to save someone."
+    },
+    {
+      "text": "回到家里，我虽然很累，但是却感到很充实。",
+      "segments": [
+        "回到",
+        "家里",
+        "，",
+        "我",
+        "虽然",
+        "很累",
+        "，",
+        "但是",
+        "却",
+        "感到很充实",
+        "。"
+      ],
+      "icon": "smile",
+      "color": "text-yellow-500",
+      "description": "Tired but feeling fulfilled after a long day."
+    },
+    {
+      "text": "我心跳开始加快，手心开始冒汗，心像在打鼓一样。",
+      "segments": [
+        "我",
+        "心跳",
+        "开始加快",
+        "，",
+        "手心",
+        "开始冒汗",
+        "，",
+        "心像在打鼓一样",
+        "。"
+      ],
+      "icon": "activity",
+      "color": "text-red-500",
+      "description": "Heart racing and palms sweating like a drum."
+    },
+    {
+      "text": "碧蓝的天空万里无云，今天又是风和日丽的好天气。",
+      "segments": [
+        "碧蓝的",
+        "天空",
+        "万里无云",
+        "，",
+        "今天",
+        "又是",
+        "风和日丽的",
+        "好天气",
+        "。"
+      ],
+      "icon": "sun",
+      "color": "text-orange-400",
+      "description": "Clear blue sky and beautiful sunny weather."
+    },
+    {
+      "text": "天空本来是晴朗的，但过了不久却乌云密布，雷声隆隆。",
+      "segments": [
+        "天空",
+        "本来是",
+        "晴朗的",
+        "，",
+        "但",
+        "过了不久",
+        "却",
+        "乌云密布",
+        "，",
+        "雷声隆隆",
+        "。"
+      ],
+      "icon": "cloud-rain",
+      "color": "text-slate-500",
+      "description": "Sudden dark clouds and thunder."
+    }
+  ],
+  "sentenceBank": {}
+}

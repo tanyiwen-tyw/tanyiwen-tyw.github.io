@@ -1,0 +1,194 @@
+{
+  "title": "第五课 (Lesson 5)",
+  "vocab": [
+    {
+      "word": "程度",
+      "pinyin": "chéng dù",
+      "meaning": "Degree / Level",
+      "example": "他的汉语达到了很高的程度。"
+    },
+    {
+      "word": "矛盾",
+      "pinyin": "máo dùn",
+      "meaning": "Contradiction / Conflict",
+      "example": "他们两个人的看法有点矛盾。"
+    },
+    {
+      "word": "严肃",
+      "pinyin": "yán sù",
+      "meaning": "Serious",
+      "example": "爸爸表情严肃地看着我。"
+    },
+    {
+      "word": "逗",
+      "pinyin": "dòu",
+      "meaning": "Tease / Amuse",
+      "example": "他在逗小猫玩。"
+    },
+    {
+      "word": "根据",
+      "pinyin": "gēn jù",
+      "meaning": "According to",
+      "example": "根据天气预报，明天会下雨。"
+    },
+    {
+      "word": "遇到",
+      "pinyin": "yù dào",
+      "meaning": "Meet / Encounter",
+      "example": "我在路上遇到了一个老同学。"
+    },
+    {
+      "word": "不禁",
+      "pinyin": "bù jīn",
+      "meaning": "Cannot help but",
+      "example": "看到这个好笑的场面，我不禁笑出声来。"
+    },
+    {
+      "word": "怀疑",
+      "pinyin": "huái yí",
+      "meaning": "Suspect / Doubt",
+      "example": "我怀疑这个消息是假的。"
+    },
+    {
+      "word": "测试",
+      "pinyin": "cè shì",
+      "meaning": "Test",
+      "example": "这是一次性格测试。"
+    },
+    {
+      "word": "碎片",
+      "pinyin": "suì piàn",
+      "meaning": "Fragment",
+      "example": "杯子掉在地上变成了碎片。"
+    },
+    {
+      "word": "呼吸",
+      "pinyin": "hū xī",
+      "meaning": "Breathe",
+      "example": "早晨的空气很清新，适合深呼吸。"
+    },
+    {
+      "word": "避开",
+      "pinyin": "bì kāi",
+      "meaning": "Avoid",
+      "example": "他总是故意避开那个话题。"
+    },
+    {
+      "word": "愤怒",
+      "pinyin": "fèn nù",
+      "meaning": "Anger",
+      "example": "他的无礼行为让人感到非常愤怒。"
+    },
+    {
+      "word": "火辣",
+      "pinyin": "huǒ là",
+      "meaning": "Burning / Spicy hot",
+      "example": "他的脸感到火辣辣的。"
+    },
+    {
+      "word": "打招呼",
+      "pinyin": "dǎ zhā o hu",
+      "meaning": "Greet",
+      "example": "见到老师要主动打招呼。"
+    },
+    {
+      "word": "一分一秒",
+      "pinyin": "yì fēn yì miǎo",
+      "meaning": "Every second",
+      "example": "我们要珍惜每一分一秒。"
+    },
+    {
+      "word": "抱怨",
+      "pinyin": "bào yuàn",
+      "meaning": "Complain",
+      "example": "他总是抱怨工作太累。"
+    },
+    {
+      "word": "闯祸",
+      "pinyin": "chuǎng huò",
+      "meaning": "Get into trouble",
+      "example": "这孩子又闯祸了。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "他吓得脸青唇白，惊恐万状。",
+      "segments": [
+        "他",
+        "吓得",
+        "脸青唇白",
+        "，",
+        "惊恐万状",
+        "。"
+      ],
+      "icon": "ghost",
+      "color": "text-slate-800",
+      "description": "Pale face and extreme terror."
+    },
+    {
+      "text": "当我看到这一幕，顿时大惊失色。",
+      "segments": [
+        "当我",
+        "看到",
+        "这一幕",
+        "，",
+        "顿时",
+        "大惊失色",
+        "。"
+      ],
+      "icon": "search",
+      "color": "text-yellow-600",
+      "description": "Turning pale with fright upon seeing something."
+    },
+    {
+      "text": "我的脸红得像一个熟透了的红苹果。",
+      "segments": [
+        "我的",
+        "脸",
+        "红得像",
+        "一个",
+        "熟透了的",
+        "红苹果",
+        "。"
+      ],
+      "icon": "flame",
+      "color": "text-red-500",
+      "description": "Blushing deeply like a ripe red apple."
+    },
+    {
+      "text": "拿到试卷，我拖着沉重的脚步走路回家。",
+      "segments": [
+        "拿到",
+        "试卷",
+        "，",
+        "我",
+        "拖着",
+        "沉重的脚步",
+        "走路回家",
+        "。"
+      ],
+      "icon": "frown",
+      "color": "text-blue-800",
+      "description": "Walking home with heavy steps after getting exam results."
+    },
+    {
+      "text": "妈妈见我这么懂事，乐得眉开眼笑，开心地竖起大拇指。",
+      "segments": [
+        "妈妈",
+        "见我",
+        "这么懂事",
+        "，",
+        "乐得",
+        "眉开眼笑",
+        "，",
+        "开心地",
+        "竖起大拇指",
+        "。"
+      ],
+      "icon": "smile",
+      "color": "text-pink-400",
+      "description": "Mother beaming with joy and giving a thumbs up."
+    }
+  ],
+  "sentenceBank": {}
+}

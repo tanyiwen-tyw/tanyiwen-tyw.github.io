@@ -1,0 +1,197 @@
+{
+  "title": "第三课 (Lesson 3)",
+  "vocab": [
+    {
+      "word": "黄瓜",
+      "pinyin": "huáng guā",
+      "meaning": "Cucumber",
+      "example": "奶奶在花园里种了很多黄瓜。"
+    },
+    {
+      "word": "聚会",
+      "pinyin": "jù huì",
+      "meaning": "Gathering / Party",
+      "example": "今晚我们有个同学聚会。"
+    },
+    {
+      "word": "似的",
+      "pinyin": "shì de",
+      "meaning": "As if",
+      "example": "他高兴得像个孩子似的。"
+    },
+    {
+      "word": "剪",
+      "pinyin": "jiǎn",
+      "meaning": "Cut / Scissors",
+      "example": "请用剪刀把这张纸剪开。"
+    },
+    {
+      "word": "紫菜",
+      "pinyin": "zǐ cài",
+      "meaning": "Seaweed",
+      "example": "紫菜汤很有营养。"
+    },
+    {
+      "word": "祝福",
+      "pinyin": "zhù fú",
+      "meaning": "Bless / Wishes",
+      "example": "我送上最诚挚的祝福。"
+    },
+    {
+      "word": "身份",
+      "pinyin": "shēn fèn",
+      "meaning": "Identity / Status",
+      "example": "他的身份依然是个秘密。"
+    },
+    {
+      "word": "炒",
+      "pinyin": "chǎo",
+      "meaning": "Stir-fry",
+      "example": "妈妈炒了一盘青菜。"
+    },
+    {
+      "word": "形状",
+      "pinyin": "xíng zhuàng",
+      "meaning": "Shape",
+      "example": "这块饼干的形状很特别。"
+    },
+    {
+      "word": "调味料",
+      "pinyin": "tiáo wèi liào",
+      "meaning": "Seasoning",
+      "example": "汤里加点调味料会更好喝。"
+    },
+    {
+      "word": "贺卡",
+      "pinyin": "hè kǎ",
+      "meaning": "Greeting card",
+      "example": "我亲手做了一张贺卡送给老师。"
+    },
+    {
+      "word": "安慰",
+      "pinyin": "ān wèi",
+      "meaning": "Comfort",
+      "example": "朋友难过时，我们要去安慰他。"
+    },
+    {
+      "word": "沉默",
+      "pinyin": "chén mò",
+      "meaning": "Silence",
+      "example": "屋子里陷入了一片沉默。"
+    },
+    {
+      "word": "异口同声",
+      "pinyin": "yì kǒu tóng shēng",
+      "meaning": "With one voice",
+      "example": "大家异口同声地回答了老师的问题。"
+    },
+    {
+      "word": "烦恼",
+      "pinyin": "fán nǎo",
+      "meaning": "Trouble / Worry",
+      "example": "别为这点小事烦恼了。"
+    },
+    {
+      "word": "劳累",
+      "pinyin": "láo lèi",
+      "meaning": "Tired / Exhausted",
+      "example": "长时间的工作让他感到非常劳累。"
+    },
+    {
+      "word": "错误",
+      "pinyin": "cuò wù",
+      "meaning": "Mistake",
+      "example": "承认错误是勇敢的表现。"
+    },
+    {
+      "word": "材料",
+      "pinyin": "cái liào",
+      "meaning": "Material",
+      "example": "我们已经准备好了手工材料。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "同学们抬起了头，七嘴八舌地说了起来。",
+      "segments": [
+        "同学们",
+        "抬起了头",
+        "，",
+        "七嘴八舌地",
+        "说了起来",
+        "。"
+      ],
+      "icon": "users",
+      "color": "text-indigo-500",
+      "description": "Students speaking all at once."
+    },
+    {
+      "text": "他们俩同时萌生了一个坏主意。",
+      "segments": [
+        "他们俩",
+        "同时",
+        "萌生了",
+        "一个",
+        "坏主意",
+        "。"
+      ],
+      "icon": "brain",
+      "color": "text-purple-600",
+      "description": "Two people coming up with a bad idea together."
+    },
+    {
+      "text": "我心里有了决定后，就像一支离了弦的箭一样，拼命地跑向学校。",
+      "segments": [
+        "我",
+        "心里",
+        "有了决定后",
+        "，",
+        "就",
+        "像一支离了弦的箭一样",
+        "，",
+        "拼命地",
+        "跑向学校",
+        "。"
+      ],
+      "icon": "activity",
+      "color": "text-red-600",
+      "description": "Running towards school as fast as an arrow."
+    },
+    {
+      "text": "老师看见我气喘吁吁的样子，就问我发生了什么事。",
+      "segments": [
+        "老师",
+        "看见我",
+        "气喘吁吁的",
+        "样子",
+        "，",
+        "就问我",
+        "发生了",
+        "什么事",
+        "。"
+      ],
+      "icon": "activity",
+      "color": "text-blue-400",
+      "description": "Teacher asking what happened as I arrived out of breath."
+    },
+    {
+      "text": "小乐见状，一时惊呆了，张开了嘴巴，半天没合拢。",
+      "segments": [
+        "小乐",
+        "见状",
+        "，",
+        "一时惊呆了",
+        "，",
+        "张开了",
+        "嘴巴",
+        "，",
+        "半天没合拢",
+        "。"
+      ],
+      "icon": "frown",
+      "color": "text-orange-500",
+      "description": "Jaw dropping in shock."
+    }
+  ],
+  "sentenceBank": {}
+}

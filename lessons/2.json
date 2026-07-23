@@ -1,0 +1,198 @@
+{
+  "title": "第二课 (Lesson 2)",
+  "vocab": [
+    {
+      "word": "答案",
+      "pinyin": "dá àn",
+      "meaning": "Answer",
+      "example": "这个问题没有标准答案。"
+    },
+    {
+      "word": "户外",
+      "pinyin": "hù wài",
+      "meaning": "Outdoors",
+      "example": "我喜欢在周末参加户外活动。"
+    },
+    {
+      "word": "伤害",
+      "pinyin": "shāng hài",
+      "meaning": "Harm / Hurt",
+      "example": "我们不要轻易伤害别人的感情。"
+    },
+    {
+      "word": "盯",
+      "pinyin": "dīng",
+      "meaning": "Stare / Gaze",
+      "example": "他目不转睛地盯着书本。"
+    },
+    {
+      "word": "代表",
+      "pinyin": "dài biǎo",
+      "meaning": "Represent",
+      "example": "他代表学校参加了比赛。"
+    },
+    {
+      "word": "而且",
+      "pinyin": "ér qiě",
+      "meaning": "Furthermore / And",
+      "example": "她不仅聪明，而且非常勤奋。"
+    },
+    {
+      "word": "习惯",
+      "pinyin": "xí guàn",
+      "meaning": "Habit",
+      "example": "早睡早起是一个好习惯。"
+    },
+    {
+      "word": "正确",
+      "pinyin": "zhèng què",
+      "meaning": "Correct",
+      "example": "请选择正确的选项。"
+    },
+    {
+      "word": "昏暗",
+      "pinyin": "hūn àn",
+      "meaning": "Dim / Dark",
+      "example": "这里的灯光太昏暗了。"
+    },
+    {
+      "word": "放松",
+      "pinyin": "fàng sōng",
+      "meaning": "Relax",
+      "example": "听音乐可以让我感到放松。"
+    },
+    {
+      "word": "每隔",
+      "pinyin": "měi gé",
+      "meaning": "At intervals of",
+      "example": "每隔一小时，我们就休息一下。"
+    },
+    {
+      "word": "下降",
+      "pinyin": "xià jiàng",
+      "meaning": "Decline / Drop",
+      "example": "最近气温有所下降。"
+    },
+    {
+      "word": "电脑",
+      "pinyin": "diàn nǎo",
+      "meaning": "Computer",
+      "example": "我用电脑写作业。"
+    },
+    {
+      "word": "眼圈",
+      "pinyin": "yǎn quān",
+      "meaning": "Eye circles",
+      "example": "他熬夜了，黑眼圈很重。"
+    },
+    {
+      "word": "模糊",
+      "pinyin": "mó hu",
+      "meaning": "Blurry",
+      "example": "远处的景物有些模糊。"
+    },
+    {
+      "word": "抛到脑后",
+      "pinyin": "pāo dào nǎo hòu",
+      "meaning": "To forget completely",
+      "example": "他把烦恼都抛到脑后了。"
+    },
+    {
+      "word": "保持",
+      "pinyin": "bǎo chí",
+      "meaning": "Maintain",
+      "example": "请保持安静。"
+    },
+    {
+      "word": "距离",
+      "pinyin": "jù lí",
+      "meaning": "Distance",
+      "example": "我们要保持安全距离。"
+    }
+  ],
+  "sentences": [
+    {
+      "text": "小月吓得浑身发抖，直冒冷汗。",
+      "segments": [
+        "小月",
+        "吓得",
+        "浑身发抖",
+        "，",
+        "直冒",
+        "冷汗",
+        "。"
+      ],
+      "icon": "ghost",
+      "color": "text-purple-500",
+      "description": "Scared girl, shivering with cold sweat."
+    },
+    {
+      "text": "小安坐在电脑前，目不转睛地盯着屏幕。",
+      "segments": [
+        "小安",
+        "坐在",
+        "电脑前",
+        "，",
+        "目不转睛地",
+        "盯着",
+        "屏幕",
+        "。"
+      ],
+      "icon": "monitor",
+      "color": "text-blue-500",
+      "description": "A boy staring intently at the computer screen."
+    },
+    {
+      "text": "我急得像热锅上的蚂蚁，心里七上八下的。",
+      "segments": [
+        "我",
+        "急得像",
+        "热锅上的",
+        "蚂蚁",
+        "，",
+        "心里",
+        "七上八下的",
+        "。"
+      ],
+      "icon": "flame",
+      "color": "text-red-500",
+      "description": "Anxious like an ant on a hot pan."
+    },
+    {
+      "text": "在好奇心的驱使下，我向着烟味的方向走去。",
+      "segments": [
+        "在",
+        "好奇心的",
+        "驱使下",
+        "，",
+        "我",
+        "向着",
+        "烟味的方向",
+        "走去",
+        "。"
+      ],
+      "icon": "search",
+      "color": "text-emerald-500",
+      "description": "Driven by curiosity, walking towards the smoke."
+    },
+    {
+      "text": "因为睡眠不足，他整天无精打采，身体也变差了。",
+      "segments": [
+        "因为",
+        "睡眠不足",
+        "，",
+        "他",
+        "整天",
+        "无精打采",
+        "，",
+        "身体",
+        "也变差了",
+        "。"
+      ],
+      "icon": "coffee",
+      "color": "text-amber-600",
+      "description": "Listless and tired due to lack of sleep."
+    }
+  ],
+  "sentenceBank": {}
+}
