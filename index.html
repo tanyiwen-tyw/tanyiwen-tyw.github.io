@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>华文学习平台</title>
+<title>育智小学五年级听写练习</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 <style>
   body {
-    font-family: 'ZCOOL KuaiLe', 'Baloo 2', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: linear-gradient(180deg, #fdf6e3 0%, #fbf0d9 55%, #eef2d6 100%);
     background-attachment: fixed;
     position: relative;
@@ -551,16 +549,13 @@ function renderSelection() {
 
   return `
   <div class="min-h-screen flex items-center justify-center p-6">
-    <div class="max-w-4xl w-full">
-      <header class="relative text-center mb-4 mx-auto max-w-xl overflow-hidden rounded-[2.5rem] px-6 py-6 shadow-[0_8px_0_rgba(180,140,60,.22)] border-4" style="background:#fdf1d0; border-color:#e8c873;">
+    <div class="max-w-4xl lg:max-w-5xl w-full">
+      <header class="relative text-center mb-4 mx-auto max-w-xl lg:max-w-2xl overflow-hidden rounded-[2.5rem] px-6 py-6 shadow-[0_8px_0_rgba(180,140,60,.22)] border-4" style="background:#fdf1d0; border-color:#e8c873;">
         <span class="absolute left-4 top-3 text-lg opacity-70 -rotate-6" style="color:#c9a55a;">★ ✦ ✨</span>
         <span class="absolute right-3 bottom-2 text-xl opacity-70 rotate-6" style="color:#c9a55a;">🖊️</span>
         <div class="flex items-center justify-center gap-4">
           <div class="blob-badge shrink-0 w-16 h-16 grid place-items-center text-3xl border-4 border-white shadow-[0_4px_0_rgba(180,140,60,.3)] rotate-6" style="background:linear-gradient(145deg,#ffdca8,#ffb84d);">🦊</div>
-          <div>
-            <h1 class="text-2xl md:text-3xl font-black tracking-tight text-[#7a5230]">华文学习平台</h1>
-            <p class="mt-1 text-sm md:text-base font-bold text-[#a67c4e]">请选择课次开始学习</p>
-          </div>
+          <h1 class="text-2xl md:text-3xl font-black tracking-tight text-[#7a5230]">育智小学五年级听写练习</h1>
         </div>
       </header>
 
@@ -574,7 +569,7 @@ function renderSelection() {
       </div>
 
       <p class="text-center text-[#a67c4e] font-black text-xs tracking-[0.35em] uppercase mb-3">🎲 自由选择．自由复习 🎲</p>
-      <button onclick="openPicker()" class="w-full max-w-xl mx-auto block text-[#f5ecd2] border-4 border-dashed rounded-2xl py-5 shadow-[0_6px_0_rgba(0,0,0,.28)] hover:shadow-[0_4px_0_rgba(0,0,0,.28)] hover:-translate-y-0.5 active:shadow-none active:translate-y-1.5 transition-all flex items-center justify-center gap-3" style="background:#33422f; border-color:#cbb27a;">
+      <button onclick="openPicker()" class="w-full max-w-xl lg:max-w-2xl mx-auto block text-[#f5ecd2] border-4 border-dashed rounded-2xl py-5 shadow-[0_6px_0_rgba(0,0,0,.28)] hover:shadow-[0_4px_0_rgba(0,0,0,.28)] hover:-translate-y-0.5 active:shadow-none active:translate-y-1.5 transition-all flex items-center justify-center gap-3" style="background:#33422f; border-color:#cbb27a;">
         <span class="text-2xl">🎲</span>
         <span class="text-lg font-black tracking-wide">自由复习（自选课次）</span>
       </button>
@@ -587,7 +582,7 @@ function renderLoadingScreen(message) {
   <div class="min-h-screen flex items-center justify-center p-6">
     <div class="text-center">
       <div class="w-12 h-12 border-4 border-amber-200 border-t-amber-500 rounded-full animate-spin mx-auto mb-4"></div>
-      <p class="text-amber-400 font-bold">${message}</p>
+      <p class="text-amber-700 font-bold">${message}</p>
     </div>
   </div>`;
 }
@@ -598,7 +593,7 @@ function renderErrorScreen(message, retryFnCall) {
     <div class="text-center max-w-sm">
       <p class="text-rose-500 font-bold mb-4">${message}</p>
       <button onclick="${retryFnCall}" class="px-6 py-3 bg-amber-400 text-white rounded-2xl font-black text-sm hover:bg-amber-500 transition-all">重试</button>
-      <button onclick="goSelection()" class="block mt-3 mx-auto text-amber-400 text-sm font-bold hover:text-amber-600">返回选择课次</button>
+      <button onclick="goSelection()" class="block mt-3 mx-auto text-amber-700 text-sm font-bold hover:text-amber-900">返回选择课次</button>
     </div>
   </div>`;
 }
@@ -627,17 +622,17 @@ function renderPicker() {
 
   return `
   <div class="min-h-screen p-4 md:p-8">
-    <div class="max-w-xl mx-auto">
+    <div class="max-w-xl lg:max-w-2xl mx-auto">
       <header class="mb-6 flex items-center gap-4">
-        <button onclick="goSelection()" class="p-2 bg-white hover:bg-amber-50 rounded-lg text-amber-400 shadow-sm">${icon('home','w-5 h-5')}</button>
+        <button onclick="goSelection()" class="p-2 bg-white hover:bg-amber-50 rounded-lg text-amber-700 shadow-sm">${icon('home','w-5 h-5')}</button>
         <h1 class="text-2xl font-black text-amber-900 tracking-tight">选择要复习的课次</h1>
       </header>
       <div class="flex justify-between items-center mb-4">
-        <p class="text-amber-400 font-bold text-sm">${count > 0 ? `已选 ${count} 课` : '请选择至少一课'}</p>
-        <button onclick="togglePickerAll()" class="text-amber-500 font-black text-xs tracking-widest uppercase hover:text-amber-700">${allSelected ? '取消全选' : '全选'}</button>
+        <p class="text-amber-700 font-bold text-sm">${count > 0 ? `已选 ${count} 课` : '请选择至少一课'}</p>
+        <button onclick="togglePickerAll()" class="text-amber-700 font-black text-xs tracking-widest uppercase hover:text-amber-900">${allSelected ? '取消全选' : '全选'}</button>
       </div>
       <div class="flex flex-col gap-3 mb-8 max-h-[50vh] overflow-y-auto pr-1">${items}</div>
-      <button onclick="startCustomReview()" ${count === 0 ? 'disabled' : ''} class="w-full py-4 rounded-2xl font-black uppercase text-sm tracking-widest transition-all ${count === 0 ? 'bg-amber-100 text-amber-300 cursor-not-allowed' : 'bg-amber-500 text-white shadow-md hover:bg-amber-600'}">
+      <button onclick="startCustomReview()" ${count === 0 ? 'disabled' : ''} class="w-full py-4 rounded-2xl font-black uppercase text-sm tracking-widest transition-all ${count === 0 ? 'bg-amber-100 text-amber-700 cursor-not-allowed' : 'bg-amber-500 text-white shadow-md hover:bg-amber-600'}">
         开始听写练习（随机 ${REVIEW_VOCAB_COUNT} 词语 + ${REVIEW_SENTENCE_COUNT} 句子）
       </button>
     </div>
@@ -651,15 +646,15 @@ function renderCustomReviewScreen() {
 
   return `
   <div class="min-h-screen p-4 md:p-8 select-none">
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
       <header class="mb-6 flex flex-col md:flex-row justify-between items-center gap-4 rounded-2xl px-4 py-3 text-white shadow-[0_6px_0_rgba(150,95,30,.28)]" style="background:linear-gradient(135deg,#d97a3f 0%,#e8a33d 45%,#c96a3e 100%);">
         <div class="flex items-center gap-4">
           <button onclick="goSelection()" class="p-2 hover:bg-white/15 rounded-lg text-white/90">${icon('home','w-5 h-5')}</button>
           <h1 class="text-xl font-black uppercase tracking-tight">🎲 自由复习</h1>
         </div>
         <div class="flex bg-white/15 p-1 rounded-xl">
-          <button onclick="startApplyPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'apply' ? 'bg-white text-amber-600 shadow-sm' : 'text-white/80'}">词语应用</button>
-          <button onclick="startPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-amber-600 shadow-sm' : 'text-white/80'}">听写练习</button>
+          <button onclick="startApplyPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'apply' ? 'bg-white text-amber-700 shadow-sm' : 'text-white/80'}">词语应用</button>
+          <button onclick="startPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-amber-700 shadow-sm' : 'text-white/80'}">听写练习</button>
         </div>
       </header>
       ${state.view === 'apply' ? renderApplyCard() : renderPractice()}
@@ -680,16 +675,16 @@ function renderLesson() {
 
   return `
   <div class="min-h-screen p-4 md:p-8 select-none">
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
       <header class="mb-6 flex flex-col md:flex-row justify-between items-center gap-4 rounded-2xl px-4 py-3 text-white shadow-[0_6px_0_rgba(150,95,30,.28)]" style="background:linear-gradient(135deg,#d97a3f 0%,#e8a33d 45%,#c96a3e 100%);">
         <div class="flex items-center gap-4">
           <button onclick="goSelection()" class="p-2 hover:bg-white/15 rounded-lg text-white/90">${icon('home','w-5 h-5')}</button>
           <h1 class="text-xl font-black uppercase tracking-tight">${L.title}</h1>
         </div>
         <div class="flex bg-white/15 p-1 rounded-xl">
-          <button onclick="goLearn()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'learn' ? 'bg-white text-amber-600 shadow-sm' : 'text-white/80'}">学习</button>
-          <button onclick="startApplyPractice()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'apply' ? 'bg-white text-amber-600 shadow-sm' : 'text-white/80'}">词语应用</button>
-          <button onclick="startPractice()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-amber-600 shadow-sm' : 'text-white/80'}">听写练习</button>
+          <button onclick="goLearn()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'learn' ? 'bg-white text-amber-700 shadow-sm' : 'text-white/80'}">学习</button>
+          <button onclick="startApplyPractice()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'apply' ? 'bg-white text-amber-700 shadow-sm' : 'text-white/80'}">词语应用</button>
+          <button onclick="startPractice()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-amber-700 shadow-sm' : 'text-white/80'}">听写练习</button>
         </div>
       </header>
       ${state.view === 'learn' ? renderLearn(L) : state.view === 'apply' ? renderApplyCard() : renderPractice()}
@@ -717,9 +712,9 @@ function renderLearn(L) {
 
   const nav = `
     <div class="flex justify-between items-center mt-12">
-      <button onclick="handlePrev()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-md text-amber-400 hover:scale-110 transition-all border border-amber-100">${icon('chevron-left','w-8 h-8')}</button>
-      <p class="font-black text-amber-300 tracking-[0.3em] uppercase text-xs">${state.currentIndex + 1} / ${total}</p>
-      <button onclick="handleNext()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-md text-amber-400 hover:scale-110 transition-all border border-amber-100">${icon('chevron-right','w-8 h-8')}</button>
+      <button onclick="handlePrev()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-md text-amber-700 hover:scale-110 transition-all border border-amber-100">${icon('chevron-left','w-8 h-8')}</button>
+      <p class="font-black text-amber-700 tracking-[0.3em] uppercase text-xs">${state.currentIndex + 1} / ${total}</p>
+      <button onclick="handleNext()" class="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-md text-amber-700 hover:scale-110 transition-all border border-amber-100">${icon('chevron-right','w-8 h-8')}</button>
     </div>`;
 
   return `${tabs}<div class="min-h-[500px]">${body}${nav}</div>`;
@@ -729,13 +724,13 @@ function renderVocabCard(L) {
   const item = L.vocab[state.currentIndex];
   return `
   <div class="flex flex-col items-center">
-    <div onclick="toggleFlip()" class="w-full max-w-sm aspect-[4/5] cursor-pointer perspective-1000 relative">
+    <div onclick="toggleFlip()" class="w-full max-w-sm lg:max-w-md aspect-[4/5] cursor-pointer perspective-1000 relative">
       <div class="flip-inner ${state.isFlipped ? 'flipped' : ''}" style="width:100%;height:100%;">
         <div class="flip-face backface-hidden rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-12 border-4 border-white overflow-hidden" style="background:linear-gradient(145deg,#fff 0%,#fff9d9 100%);">
           <span class="absolute left-6 top-4 text-4xl opacity-30" style="color:#ffbc43;">✦</span>
           <span class="absolute right-6 bottom-4 text-4xl rotate-6">🍬</span>
           <span class="text-8xl font-black text-amber-900 tracking-tighter">${item.word}</span>
-          <p class="absolute bottom-12 text-amber-200 font-black text-[10px] tracking-[0.4em] uppercase">点击查看详情</p>
+          <p class="absolute bottom-12 text-amber-700 font-black text-[10px] tracking-[0.4em] uppercase">点击查看详情</p>
         </div>
         <div class="flip-face flip-back backface-hidden rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-12 border-4 border-white/60 overflow-hidden" style="background:linear-gradient(145deg,#e8a33d 0%,#d97a3f 46%,#c96a3e 100%);">
           <span class="absolute left-6 top-4 text-4xl">🎉</span>
@@ -748,7 +743,7 @@ function renderVocabCard(L) {
           <div class="w-full h-px bg-white/30 mb-8"></div>
           <div class="bg-white/90 p-6 rounded-3xl w-full text-center relative">
             ${item.example ? `<p class="text-xl font-bold text-amber-700 leading-relaxed mb-6">${item.example}</p>` : ''}
-            <button onclick="event.stopPropagation(); speakText('${(item.example || item.word).replace(/'/g, "\\'")}', this)" class="p-3 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-all">${icon('volume-2','w-6 h-6')}</button>
+            <button onclick="event.stopPropagation(); speakText('${(item.example || item.word).replace(/'/g, "\\'")}', this)" class="p-3 rounded-full bg-amber-100 text-amber-700 hover:bg-amber-200 transition-all">${icon('volume-2','w-6 h-6')}</button>
           </div>
         </div>
       </div>
@@ -768,12 +763,12 @@ function renderSentenceGame(L) {
     <div class="flex flex-col items-center mb-8">
       <div class="p-8 bg-sky-50 rounded-full mb-6 ring-8 ring-sky-50/50">${icon(s.icon, 'w-16 h-16 ' + s.color)}</div>
       <p class="text-sky-300 text-[10px] font-black tracking-[0.4em] mb-2 uppercase">场景</p>
-      <p class="text-amber-500 text-center text-lg font-bold italic px-4">${s.description}</p>
+      <p class="text-amber-700 text-center text-lg font-bold italic px-4">${s.description}</p>
     </div>
     <div class="min-h-[120px] mb-8 p-6 bg-sky-50 rounded-[2rem] border-4 border-dashed border-sky-200 flex flex-wrap gap-2 items-center justify-center">${userChips}</div>
     <div class="flex flex-wrap gap-3 justify-center mb-10">${options}</div>
     <div class="flex justify-between items-center pt-8 border-t border-sky-100">
-      <button onclick="resetLearnSentence()" class="text-amber-300 hover:text-sky-600 flex items-center gap-2 font-black text-xs tracking-widest">${icon('rotate-cw','w-4 h-4')} 重置</button>
+      <button onclick="resetLearnSentence()" class="text-amber-700 hover:text-sky-600 flex items-center gap-2 font-black text-xs tracking-widest">${icon('rotate-cw','w-4 h-4')} 重置</button>
       <button onclick="toggleFlip()" class="text-white font-black text-xs tracking-widest px-4 py-2 rounded-full shadow-[0_4px_0_#0369a1] hover:shadow-[0_2px_0_#0369a1] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all uppercase" style="background:linear-gradient(135deg,#e8a33d,#c96a3e);">${state.isFlipped ? '隐藏答案' : '显示答案'}</button>
     </div>
     ${state.isFlipped ? `
@@ -794,9 +789,9 @@ function renderPractice() {
         <span class="absolute right-6 bottom-6 text-4xl -rotate-6">🎉</span>
         <div class="w-32 h-32 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center mb-8">${icon('check','w-16 h-16')}</div>
         <h2 class="text-4xl font-black text-amber-900 mb-4 tracking-tighter">练习完成! 🌟</h2>
-        <p class="text-amber-400 font-bold mb-10 text-lg">${state.isCustomReview ? '做得好! 你已经完成了这次自由复习。' : `做得好! 你已经掌握了第 ${state.currentLesson} 课。`}</p>
+        <p class="text-amber-700 font-bold mb-10 text-lg">${state.isCustomReview ? '做得好! 你已经完成了这次自由复习。' : `做得好! 你已经掌握了第 ${state.currentLesson} 课。`}</p>
         <div class="flex gap-4">
-          <button onclick="goSelection()" class="px-8 py-4 bg-amber-50 text-amber-600 rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#f2e2b8] hover:shadow-[0_2px_0_#f2e2b8] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all">选择课次</button>
+          <button onclick="goSelection()" class="px-8 py-4 bg-amber-50 text-amber-700 rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#f2e2b8] hover:shadow-[0_2px_0_#f2e2b8] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all">选择课次</button>
           <button onclick="${state.isCustomReview ? 'startCustomReview()' : 'startPractice()'}" class="px-8 py-4 text-white rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#9c6b2e] hover:shadow-[0_2px_0_#9c6b2e] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all" style="background:linear-gradient(135deg,#e8a33d,#c96a3e);">重新开始</button>
         </div>
       </div>
@@ -806,12 +801,12 @@ function renderPractice() {
   const item = state.practiceQueue[state.currentIndex];
   const front = state.practicePhase === 'tingxie'
     ? `<div class="text-center">
-         <p class="text-5xl font-black text-amber-500 mb-4 tracking-tight">${item?.pinyin || ''}</p>
-         <p class="text-2xl text-amber-300 italic font-bold">${item?.meaning || ''}</p>
+         <p class="text-5xl font-black text-amber-700 mb-4 tracking-tight">${item?.pinyin || ''}</p>
+         <p class="text-2xl text-amber-700 italic font-bold">${item?.meaning || ''}</p>
        </div>`
     : `<div class="flex flex-col items-center text-center">
          <div class="p-8 bg-amber-50 rounded-full mb-8 ring-8 ring-amber-50">${icon(item?.icon, 'w-16 h-16 ' + (item?.color || ''))}</div>
-         <p class="text-xl text-amber-600 font-black tracking-tight leading-snug">${item?.description || ''}</p>
+         <p class="text-xl text-amber-700 font-black tracking-tight leading-snug">${item?.description || ''}</p>
        </div>`;
   const back = state.practicePhase === 'tingxie'
     ? `<span class="text-white font-black leading-tight text-center text-9xl tracking-tighter">${item?.word || ''}</span>`
@@ -821,22 +816,22 @@ function renderPractice() {
   <div class="flex flex-col items-center min-h-[550px]">
     <div class="w-full mb-8 flex justify-between items-end">
       <div>
-        <span class="text-[10px] font-black text-amber-300 uppercase tracking-[0.4em] block mb-1">练习阶段</span>
+        <span class="text-[10px] font-black text-amber-700 uppercase tracking-[0.4em] block mb-1">练习阶段</span>
         <h2 class="text-3xl font-black text-amber-900">${state.practicePhase === 'tingxie' ? '🧩 听写测试' : '📝 默写测试'}</h2>
       </div>
       <div class="bg-amber-50 px-4 py-2 rounded-2xl">
-        <span class="text-[10px] font-black text-amber-300 uppercase tracking-widest block text-right mb-1">进度</span>
-        <p class="text-2xl font-black text-amber-500">${state.currentIndex + 1} / ${state.practiceQueue.length}</p>
+        <span class="text-[10px] font-black text-amber-700 uppercase tracking-widest block text-right mb-1">进度</span>
+        <p class="text-2xl font-black text-amber-700">${state.currentIndex + 1} / ${state.practiceQueue.length}</p>
       </div>
     </div>
 
-    <div onclick="toggleFlip()" class="w-full max-w-sm aspect-[4/5] cursor-pointer perspective-1000 relative">
+    <div onclick="toggleFlip()" class="w-full max-w-sm lg:max-w-md aspect-[4/5] cursor-pointer perspective-1000 relative">
       <div class="flip-inner ${state.isFlipped ? 'flipped' : ''}" style="width:100%;height:100%;">
         <div class="flip-face backface-hidden rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-12 border-4 border-white overflow-hidden" style="background:linear-gradient(145deg,#fff 0%,#fff9d9 100%);">
           <span class="absolute left-6 top-4 text-4xl opacity-30" style="color:#ffbc43;">✦</span>
           <span class="absolute right-6 bottom-4 text-4xl rotate-6">🍭</span>
           ${front}
-          <p class="absolute bottom-12 text-amber-200 font-black text-[10px] tracking-[0.4em] uppercase">点击查看答案</p>
+          <p class="absolute bottom-12 text-amber-700 font-black text-[10px] tracking-[0.4em] uppercase">点击查看答案</p>
         </div>
         <div class="flip-face flip-back backface-hidden rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-12 border-4 border-white/60 overflow-hidden" style="background:linear-gradient(145deg,#e8a33d 0%,#d97a3f 46%,#c96a3e 100%);">
           <span class="absolute left-6 top-4 text-4xl">🎉</span>
@@ -846,7 +841,7 @@ function renderPractice() {
       </div>
     </div>
 
-    <div class="w-full max-w-sm grid grid-cols-2 gap-6 mt-12">
+    <div class="w-full max-w-sm lg:max-w-md grid grid-cols-2 gap-6 mt-12">
       <button onclick="event.stopPropagation(); handlePracticeMissed()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl text-rose-400 shadow-[0_6px_0_#ffc9d1] hover:shadow-[0_4px_0_#ffc9d1] hover:translate-y-[2px] active:shadow-none active:translate-y-[6px] transition-all group">
         ${icon('x','w-10 h-10 mb-2 group-hover:scale-125 transition-transform')}
         <span class="font-black text-xs tracking-widest uppercase">记错了</span>
@@ -864,7 +859,7 @@ function renderApplyCard() {
     return `
     <div class="flex flex-col items-center justify-center min-h-[400px] text-center gap-4">
       <span class="text-5xl">📭</span>
-      <p class="text-amber-400 font-bold max-w-xs">${state.isCustomReview ? '所选课次暂无词语应用内容，请选择其他课次或稍后再试。' : '该课次的词语应用内容还在准备中，敬请期待。'}</p>
+      <p class="text-amber-700 font-bold max-w-xs">${state.isCustomReview ? '所选课次暂无词语应用内容，请选择其他课次或稍后再试。' : '该课次的词语应用内容还在准备中，敬请期待。'}</p>
       <button onclick="goSelection()" class="px-6 py-3 bg-amber-400 text-white rounded-2xl font-black text-sm hover:bg-amber-500 transition-all">返回选择课次</button>
     </div>`;
   }
@@ -878,9 +873,9 @@ function renderApplyCard() {
         <span class="absolute right-6 bottom-6 text-4xl -rotate-6">🎉</span>
         <div class="w-32 h-32 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center mb-8">${icon('check','w-16 h-16')}</div>
         <h2 class="text-4xl font-black text-amber-900 mb-4 tracking-tighter">词语应用完成! 🌟</h2>
-        <p class="text-amber-400 font-bold mb-10 text-lg">${state.isCustomReview ? '做得好! 你已经完成了这次自由复习的词语应用。' : `做得好! 你已经完成了第 ${state.currentLesson} 课的词语应用。`}</p>
+        <p class="text-amber-700 font-bold mb-10 text-lg">${state.isCustomReview ? '做得好! 你已经完成了这次自由复习的词语应用。' : `做得好! 你已经完成了第 ${state.currentLesson} 课的词语应用。`}</p>
         <div class="flex gap-4">
-          <button onclick="goSelection()" class="px-8 py-4 bg-amber-50 text-amber-600 rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#f2e2b8] hover:shadow-[0_2px_0_#f2e2b8] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all">选择课次</button>
+          <button onclick="goSelection()" class="px-8 py-4 bg-amber-50 text-amber-700 rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#f2e2b8] hover:shadow-[0_2px_0_#f2e2b8] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all">选择课次</button>
           <button onclick="startApplyPractice()" class="px-8 py-4 text-white rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#0d9488] hover:shadow-[0_2px_0_#0d9488] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all" style="background:linear-gradient(135deg,#10b981,#0ea5e9);">重新开始</button>
         </div>
       </div>
@@ -893,16 +888,16 @@ function renderApplyCard() {
   <div class="flex flex-col items-center min-h-[550px]">
     <div class="w-full mb-8 flex justify-between items-end">
       <div>
-        <span class="text-[10px] font-black text-amber-300 uppercase tracking-[0.4em] block mb-1">练习阶段</span>
+        <span class="text-[10px] font-black text-amber-700 uppercase tracking-[0.4em] block mb-1">练习阶段</span>
         <h2 class="text-3xl font-black text-amber-900">🧠 词语应用</h2>
       </div>
       <div class="bg-amber-50 px-4 py-2 rounded-2xl">
-        <span class="text-[10px] font-black text-amber-300 uppercase tracking-widest block text-right mb-1">进度</span>
-        <p class="text-2xl font-black text-amber-500">${state.applyIndex + 1} / ${state.applyQueue.length}</p>
+        <span class="text-[10px] font-black text-amber-700 uppercase tracking-widest block text-right mb-1">进度</span>
+        <p class="text-2xl font-black text-amber-700">${state.applyIndex + 1} / ${state.applyQueue.length}</p>
       </div>
     </div>
 
-    <div onclick="toggleApplyFlip()" class="w-full max-w-md aspect-[4/5] cursor-pointer perspective-1000 relative">
+    <div onclick="toggleApplyFlip()" class="w-full max-w-md lg:max-w-lg aspect-[4/5] cursor-pointer perspective-1000 relative">
       <div class="flip-inner ${state.applyFlipped ? 'flipped' : ''}" style="width:100%;height:100%;">
         <div class="flip-face backface-hidden rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-10 border-4 border-white overflow-hidden" style="background:linear-gradient(145deg,#ecfdf5 0%,#d1fae5 100%);">
           <span class="absolute left-6 top-4 text-4xl opacity-30" style="color:#10b981;">✎</span>
@@ -921,7 +916,7 @@ function renderApplyCard() {
       </div>
     </div>
 
-    <div class="w-full max-w-md grid grid-cols-2 gap-6 mt-12">
+    <div class="w-full max-w-md lg:max-w-lg grid grid-cols-2 gap-6 mt-12">
       <button onclick="event.stopPropagation(); handleApplyMissed()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl text-rose-400 shadow-[0_6px_0_#ffc9d1] hover:shadow-[0_4px_0_#ffc9d1] hover:translate-y-[2px] active:shadow-none active:translate-y-[6px] transition-all group">
         ${icon('x','w-10 h-10 mb-2 group-hover:scale-125 transition-transform')}
         <span class="font-black text-xs tracking-widest uppercase">答错了</span>
