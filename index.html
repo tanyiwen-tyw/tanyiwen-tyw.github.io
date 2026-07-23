@@ -113,7 +113,7 @@ function playSound(type) {
 /* ---------------- State ---------------- */
 const state = {
   currentLesson: null,
-  view: 'selection',      // 'selection' | 'picker' | 'learn' | 'practice'
+  view: 'selection',      // 'selection' | 'picker' | 'learn' | 'apply' | 'practice'
   subTab: 'vocab',         // 'vocab' | 'sentence'
   currentIndex: 0,
   isFlipped: false,
@@ -123,6 +123,13 @@ const state = {
   isPracticeComplete: false,
   gameSelection: [],
   userSelection: [],
+
+  // 词语应用 (fill-in-the-blank sentence practice) state
+  applyQueue: [],          // [{word, blanked, fullSentence, english, answer}, ...]
+  applyIndex: 0,
+  applyFlipped: false,
+  applyTransitioning: false,
+  isApplyComplete: false,
 
   // Data-loading state
   lessonIndex: null,      // [{id, title}, ...] — loaded once for the homepage
@@ -135,7 +142,8 @@ const state = {
   pickerSelectedIds: [],   // lesson ids checked in the picker screen
   isCustomReview: false,   // true while a pooled/random review session is active
   reviewVocabSample: [],   // the 20 (or fewer) randomly chosen vocab items for this session
-  reviewSentenceSample: [] // the 5 (or fewer) randomly chosen sentences for this session
+  reviewSentenceSample: [], // the 5 (or fewer) randomly chosen sentences for this session
+  reviewSentenceBank: {}   // merged sentenceBank of all selected lessons, keyed by word
 };
 
 const REVIEW_VOCAB_COUNT = 20;
@@ -247,6 +255,10 @@ async function startCustomReview() {
   const allSentences = state.pickerSelectedIds.flatMap(id => state.lessonCache[id].sentences);
   state.reviewVocabSample = shuffle(allVocab).slice(0, Math.min(REVIEW_VOCAB_COUNT, allVocab.length));
   state.reviewSentenceSample = shuffle(allSentences).slice(0, Math.min(REVIEW_SENTENCE_COUNT, allSentences.length));
+  state.reviewSentenceBank = {};
+  state.pickerSelectedIds.forEach(id => {
+    Object.assign(state.reviewSentenceBank, state.lessonCache[id].sentenceBank || {});
+  });
   startPractice();
 }
 
@@ -389,6 +401,78 @@ function maybeAutoSpeak() {
   }
 }
 
+/* ---------------- 词语应用 (fill-in-the-blank sentence practice) ---------------- */
+function blankWord(sentence, word) {
+  const idx = sentence.indexOf(word);
+  if (idx === -1) return sentence; // shouldn't happen — bank sentences are authored per-word
+  return sentence.slice(0, idx) + '____' + sentence.slice(idx + word.length);
+}
+
+function startApplyPractice() {
+  const vocabSource = state.isCustomReview ? state.reviewVocabSample : activeLessonData().vocab;
+  const bank = state.isCustomReview ? state.reviewSentenceBank : (activeLessonData().sentenceBank || {});
+
+  const applicable = vocabSource.filter(v => bank[v.word] && bank[v.word].length > 0);
+  const queue = shuffle(applicable).map(v => {
+    const options = bank[v.word];
+    const chosen = options[Math.floor(Math.random() * options.length)];
+    return {
+      word: v.word,
+      fullSentence: chosen.zh,
+      blanked: blankWord(chosen.zh, v.word),
+      english: chosen.en,
+      answer: v.word
+    };
+  });
+
+  state.applyQueue = queue;
+  state.applyIndex = 0;
+  state.applyFlipped = false;
+  state.isApplyComplete = false;
+  state.view = 'apply';
+  playSound('flip');
+  render();
+}
+
+function toggleApplyFlip() {
+  if (state.applyTransitioning) return;
+  state.applyFlipped = !state.applyFlipped;
+  playSound('flip');
+  render();
+}
+
+function moveNextInApply() {
+  const advance = () => {
+    if (state.applyIndex < state.applyQueue.length - 1) {
+      state.applyIndex += 1;
+    } else {
+      state.isApplyComplete = true;
+    }
+    state.applyTransitioning = false;
+    render();
+  };
+  if (state.applyFlipped) {
+    state.applyFlipped = false;
+    state.applyTransitioning = true;
+    render();
+    setTimeout(advance, 500);
+  } else {
+    advance();
+  }
+}
+
+function handleApplyCorrect() {
+  playSound('correct');
+  moveNextInApply();
+}
+
+function handleApplyMissed() {
+  playSound('missed');
+  const currentItem = state.applyQueue[state.applyIndex];
+  state.applyQueue = [...state.applyQueue, currentItem];
+  moveNextInApply();
+}
+
 /* ---------------- Icon helper ---------------- */
 function icon(name, cls) {
   return `<i data-lucide="${name}" class="${cls}"></i>`;
@@ -400,7 +484,7 @@ function render() {
   let html;
   if (state.view === 'selection') html = renderSelection();
   else if (state.view === 'picker') html = renderPicker();
-  else if (state.view === 'practice' && state.isCustomReview) html = renderCustomReviewScreen();
+  else if ((state.view === 'practice' || state.view === 'apply') && state.isCustomReview) html = renderCustomReviewScreen();
   else html = renderLesson();
   app.innerHTML = html;
   if (window.lucide) lucide.createIcons();
@@ -529,11 +613,17 @@ function renderCustomReviewScreen() {
   return `
   <div class="min-h-screen p-4 md:p-8 select-none">
     <div class="max-w-2xl mx-auto">
-      <header class="mb-6 flex items-center gap-4 rounded-2xl px-4 py-3 text-white shadow-[0_6px_0_rgba(70,47,158,.22)]" style="background:linear-gradient(135deg,#5d49e8 0%,#8b5cff 45%,#ff5da8 100%);">
-        <button onclick="goSelection()" class="p-2 hover:bg-white/15 rounded-lg text-white/90">${icon('home','w-5 h-5')}</button>
-        <h1 class="text-xl font-black uppercase tracking-tight">🎲 自由复习</h1>
+      <header class="mb-6 flex flex-col md:flex-row justify-between items-center gap-4 rounded-2xl px-4 py-3 text-white shadow-[0_6px_0_rgba(70,47,158,.22)]" style="background:linear-gradient(135deg,#5d49e8 0%,#8b5cff 45%,#ff5da8 100%);">
+        <div class="flex items-center gap-4">
+          <button onclick="goSelection()" class="p-2 hover:bg-white/15 rounded-lg text-white/90">${icon('home','w-5 h-5')}</button>
+          <h1 class="text-xl font-black uppercase tracking-tight">🎲 自由复习</h1>
+        </div>
+        <div class="flex bg-white/15 p-1 rounded-xl">
+          <button onclick="startApplyPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'apply' ? 'bg-white text-violet-600 shadow-sm' : 'text-white/80'}">词语应用</button>
+          <button onclick="startPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-violet-600 shadow-sm' : 'text-white/80'}">听写练习</button>
+        </div>
       </header>
-      ${renderPractice()}
+      ${state.view === 'apply' ? renderApplyCard() : renderPractice()}
     </div>
     <style>
       .perspective-1000 { perspective: 1000px; }
@@ -558,11 +648,12 @@ function renderLesson() {
           <h1 class="text-xl font-black uppercase tracking-tight">${L.title}</h1>
         </div>
         <div class="flex bg-white/15 p-1 rounded-xl">
-          <button onclick="goLearn()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'learn' ? 'bg-white text-violet-600 shadow-sm' : 'text-white/80'}">学习</button>
-          <button onclick="startPractice()" class="px-6 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-violet-600 shadow-sm' : 'text-white/80'}">听写练习</button>
+          <button onclick="goLearn()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'learn' ? 'bg-white text-violet-600 shadow-sm' : 'text-white/80'}">学习</button>
+          <button onclick="startApplyPractice()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'apply' ? 'bg-white text-violet-600 shadow-sm' : 'text-white/80'}">词语应用</button>
+          <button onclick="startPractice()" class="px-4 py-2 rounded-lg font-bold text-sm transition-all ${state.view === 'practice' ? 'bg-white text-violet-600 shadow-sm' : 'text-white/80'}">听写练习</button>
         </div>
       </header>
-      ${state.view === 'learn' ? renderLearn(L) : renderPractice()}
+      ${state.view === 'learn' ? renderLearn(L) : state.view === 'apply' ? renderApplyCard() : renderPractice()}
     </div>
     <style>
       .perspective-1000 { perspective: 1000px; }
@@ -724,6 +815,81 @@ function renderPractice() {
       <button onclick="event.stopPropagation(); handlePracticeCorrect()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl text-emerald-500 shadow-[0_6px_0_#a7f3d0] hover:shadow-[0_4px_0_#a7f3d0] hover:translate-y-[2px] active:shadow-none active:translate-y-[6px] transition-all group">
         ${icon('check','w-10 h-10 mb-2 group-hover:scale-125 transition-transform')}
         <span class="font-black text-xs tracking-widest uppercase">记住了</span>
+      </button>
+    </div>
+  </div>`;
+}
+
+function renderApplyCard() {
+  if (state.applyQueue.length === 0) {
+    return `
+    <div class="flex flex-col items-center justify-center min-h-[400px] text-center gap-4">
+      <span class="text-5xl">📭</span>
+      <p class="text-violet-400 font-bold max-w-xs">${state.isCustomReview ? '所选课次暂无词语应用内容，请选择其他课次或稍后再试。' : '该课次的词语应用内容还在准备中，敬请期待。'}</p>
+      <button onclick="goSelection()" class="px-6 py-3 bg-violet-400 text-white rounded-2xl font-black text-sm hover:bg-violet-500 transition-all">返回选择课次</button>
+    </div>`;
+  }
+
+  if (state.isApplyComplete) {
+    return `
+    <div class="flex flex-col items-center min-h-[550px]">
+      <div class="relative w-full bg-white rounded-[3rem] p-16 text-center shadow-lg flex flex-col items-center border-4 border-white overflow-hidden">
+        <span class="absolute left-6 top-5 text-4xl">🎊</span>
+        <span class="absolute right-7 top-8 text-3xl rotate-6">✨</span>
+        <span class="absolute right-6 bottom-6 text-4xl -rotate-6">🎉</span>
+        <div class="w-32 h-32 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center mb-8">${icon('check','w-16 h-16')}</div>
+        <h2 class="text-4xl font-black text-violet-900 mb-4 tracking-tighter">词语应用完成! 🌟</h2>
+        <p class="text-violet-400 font-bold mb-10 text-lg">${state.isCustomReview ? '做得好! 你已经完成了这次自由复习的词语应用。' : `做得好! 你已经完成了第 ${state.currentLesson} 课的词语应用。`}</p>
+        <div class="flex gap-4">
+          <button onclick="goSelection()" class="px-8 py-4 bg-violet-50 text-violet-600 rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#ded6ff] hover:shadow-[0_2px_0_#ded6ff] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all">选择课次</button>
+          <button onclick="startApplyPractice()" class="px-8 py-4 text-white rounded-2xl font-black uppercase text-sm tracking-widest shadow-[0_4px_0_#0d9488] hover:shadow-[0_2px_0_#0d9488] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all" style="background:linear-gradient(135deg,#10b981,#0ea5e9);">重新开始</button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  const item = state.applyQueue[state.applyIndex];
+
+  return `
+  <div class="flex flex-col items-center min-h-[550px]">
+    <div class="w-full mb-8 flex justify-between items-end">
+      <div>
+        <span class="text-[10px] font-black text-violet-300 uppercase tracking-[0.4em] block mb-1">练习阶段</span>
+        <h2 class="text-3xl font-black text-violet-900">🧠 词语应用</h2>
+      </div>
+      <div class="bg-violet-50 px-4 py-2 rounded-2xl">
+        <span class="text-[10px] font-black text-violet-300 uppercase tracking-widest block text-right mb-1">进度</span>
+        <p class="text-2xl font-black text-violet-500">${state.applyIndex + 1} / ${state.applyQueue.length}</p>
+      </div>
+    </div>
+
+    <div onclick="toggleApplyFlip()" class="w-full max-w-md aspect-[4/5] cursor-pointer perspective-1000 relative">
+      <div class="flip-inner ${state.applyFlipped ? 'flipped' : ''}" style="width:100%;height:100%;">
+        <div class="flip-face backface-hidden rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-10 border-4 border-white overflow-hidden" style="background:linear-gradient(145deg,#ecfdf5 0%,#d1fae5 100%);">
+          <span class="absolute left-6 top-4 text-4xl opacity-30" style="color:#10b981;">✎</span>
+          <span class="absolute right-6 bottom-4 text-4xl rotate-6">🌿</span>
+          <p class="text-2xl md:text-3xl font-black text-emerald-800 leading-relaxed text-center px-2">${item.blanked}</p>
+          <button onclick="event.stopPropagation(); speakText('${item.fullSentence.replace(/'/g, "\\'")}', this)" class="mt-6 p-3 rounded-full bg-emerald-100 text-emerald-600 hover:bg-emerald-200 transition-all">${icon('volume-2','w-6 h-6')}</button>
+          <p class="mt-6 text-base text-emerald-500 italic font-bold text-center px-2">${item.english}</p>
+          <p class="absolute bottom-8 text-emerald-300 font-black text-[10px] tracking-[0.4em] uppercase">点击查看答案</p>
+        </div>
+        <div class="flip-face flip-back backface-hidden rounded-[3rem] shadow-lg flex flex-col items-center justify-center p-10 border-4 border-white/60 overflow-hidden" style="background:linear-gradient(145deg,#10b981 0%,#0ea5e9 100%);">
+          <span class="absolute left-6 top-4 text-4xl">🎉</span>
+          <span class="absolute right-7 bottom-5 text-4xl">⭐</span>
+          <span class="text-6xl font-black text-white tracking-tight mb-6">${item.answer}</span>
+          <button onclick="event.stopPropagation(); speakText('${item.answer.replace(/'/g, "\\'")}', this)" class="p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition-all">${icon('volume-2','w-6 h-6')}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full max-w-md grid grid-cols-2 gap-6 mt-12">
+      <button onclick="event.stopPropagation(); handleApplyMissed()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl text-rose-400 shadow-[0_6px_0_#ffc9d1] hover:shadow-[0_4px_0_#ffc9d1] hover:translate-y-[2px] active:shadow-none active:translate-y-[6px] transition-all group">
+        ${icon('x','w-10 h-10 mb-2 group-hover:scale-125 transition-transform')}
+        <span class="font-black text-xs tracking-widest uppercase">答错了</span>
+      </button>
+      <button onclick="event.stopPropagation(); handleApplyCorrect()" class="flex flex-col items-center justify-center py-6 bg-white rounded-3xl text-emerald-500 shadow-[0_6px_0_#a7f3d0] hover:shadow-[0_4px_0_#a7f3d0] hover:translate-y-[2px] active:shadow-none active:translate-y-[6px] transition-all group">
+        ${icon('check','w-10 h-10 mb-2 group-hover:scale-125 transition-transform')}
+        <span class="font-black text-xs tracking-widest uppercase">答对了</span>
       </button>
     </div>
   </div>`;
